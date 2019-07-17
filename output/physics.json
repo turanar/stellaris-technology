@@ -721,358 +721,6 @@
           "source": "vanilla"
         },
         {
-          "key": "tech_reactor_boosters_1",
-          "name": "Reactor Boosters",
-          "description": "Additional power generation systems increase the ship's reactor output.",
-          "area": "physics",
-          "base_factor": 1.0,
-          "base_weight": 0.0,
-          "category": "Particles",
-          "cost": 0,
-          "feature_unlocks": [
-            "<b>Component</b>: Reactor Booster"
-          ],
-          "is_dangerous": false,
-          "is_rare": false,
-          "is_start_tech": true,
-          "prerequisites": [],
-          "tier": 0,
-          "prerequisites_names": [],
-          "weight_modifiers": [],
-          "potential": [],
-          "children": [
-            {
-              "key": "tech_reactor_boosters_2",
-              "name": "Improved Reactor Boosters",
-              "description": "The discovery of fusion power allows for better reactor boosters to be fitted onto our ships.",
-              "area": "physics",
-              "base_factor": 1.5,
-              "base_weight": 135.0,
-              "category": "Particles",
-              "cost": 1000,
-              "feature_unlocks": [
-                "<b>Component</b>: Improved Reactor Booster"
-              ],
-              "is_dangerous": false,
-              "is_rare": false,
-              "is_start_tech": false,
-              "prerequisites": [
-                "tech_reactor_boosters_1",
-                "tech_fusion_power"
-              ],
-              "tier": 1,
-              "prerequisites_names": [
-                {
-                  "name": "Fusion Power",
-                  "key": "tech_fusion_power"
-                },
-                {
-                  "name": "Reactor Boosters",
-                  "key": "tech_reactor_boosters_1"
-                }
-              ],
-              "weight_modifiers": [
-                "(×<b style='color:lime'>1.25</b>) Research Leader (Physics): <br/>    •   Is Particles Expert"
-              ],
-              "potential": [],
-              "children": [
-                {
-                  "key": "tech_reactor_boosters_3",
-                  "name": "Advanced Reactor Boosters",
-                  "description": "The discovery of antimatter power allows for highly advanced reactor boosters that can greatly enhance ship reactors.",
-                  "area": "physics",
-                  "base_factor": 1.5,
-                  "base_weight": 75.0,
-                  "category": "Particles",
-                  "cost": 6000,
-                  "feature_unlocks": [
-                    "<b>Component</b>: Advanced Reactor Booster"
-                  ],
-                  "is_dangerous": false,
-                  "is_rare": false,
-                  "is_start_tech": false,
-                  "prerequisites": [
-                    "tech_reactor_boosters_2",
-                    "tech_antimatter_power"
-                  ],
-                  "tier": 1,
-                  "prerequisites_names": [
-                    {
-                      "name": "Antimatter Power",
-                      "key": "tech_antimatter_power"
-                    },
-                    {
-                      "name": "Improved Reactor Boosters",
-                      "key": "tech_reactor_boosters_2"
-                    }
-                  ],
-                  "weight_modifiers": [
-                    "(×<b style='color:lime'>1.25</b>) Research Leader (Physics): <br/>    •   Is Particles Expert"
-                  ],
-                  "potential": [],
-                  "children": [],
-                  "is_event": false,
-                  "source": "vanilla"
-                }
-              ],
-              "is_event": false,
-              "source": "vanilla"
-            }
-          ],
-          "is_event": false,
-          "source": "vanilla"
-        },
-        {
-          "key": "tech_hyper_drive_1",
-          "name": "Hyperspace Travel",
-          "description": "Like the strands of a spider web, the extra-dimensional realm of hyperspace runs between the gravity wells of most stars. Faster than light travel is theoretically possible along these hyperlanes.",
-          "area": "physics",
-          "base_factor": 1.0,
-          "base_weight": 0.0,
-          "category": "Particles",
-          "cost": 0,
-          "feature_unlocks": [
-            "<b>Component</b>: Hyper Drive I"
-          ],
-          "is_dangerous": false,
-          "is_rare": false,
-          "is_start_tech": true,
-          "prerequisites": [],
-          "tier": 0,
-          "prerequisites_names": [],
-          "weight_modifiers": [],
-          "potential": [],
-          "children": [
-            {
-              "key": "tech_hyper_drive_2",
-              "name": "Hyperlane Breach Points",
-              "description": "We have identified the existence of points in space where a ship expends less energy to \"breach\" their way into a hyperlane. This will lead to a new generation of hyper drives.",
-              "area": "physics",
-              "base_factor": 1.0,
-              "base_weight": 75.0,
-              "category": "Particles",
-              "cost": 2000,
-              "feature_unlocks": [
-                "<b>Component</b>: Hyper Drive II",
-                "<b>Starbase Building</b>: Hyperlane Registrar"
-              ],
-              "is_dangerous": false,
-              "is_rare": false,
-              "is_start_tech": false,
-              "prerequisites": [
-                "tech_hyper_drive_1"
-              ],
-              "tier": 2,
-              "prerequisites_names": [
-                {
-                  "name": "Hyperspace Travel",
-                  "key": "tech_hyper_drive_1"
-                }
-              ],
-              "weight_modifiers": [
-                "(×<b style='color:lime'>1.25</b>) Has Discovery Traditions Tradition",
-                "(×<b style='color:lime'>1.25</b>) Research Leader (Physics): <br/>    •   Is Particles Expert"
-              ],
-              "potential": [],
-              "children": [
-                {
-                  "key": "tech_hyper_drive_3",
-                  "name": "Hyperspace Slipstreams",
-                  "description": "A new generation of hyper drives capable of accessing the subspace slipstreams that are present within hyperspace. This leads to dramatically improved drive performance.",
-                  "area": "physics",
-                  "base_factor": 1.0,
-                  "base_weight": 50.0,
-                  "category": "Particles",
-                  "cost": 6000,
-                  "feature_unlocks": [
-                    "<b>Component</b>: Hyper Drive III"
-                  ],
-                  "is_dangerous": false,
-                  "is_rare": false,
-                  "is_start_tech": false,
-                  "prerequisites": [
-                    "tech_hyper_drive_2"
-                  ],
-                  "tier": 3,
-                  "prerequisites_names": [
-                    {
-                      "name": "Hyperlane Breach Points",
-                      "key": "tech_hyper_drive_2"
-                    }
-                  ],
-                  "weight_modifiers": [
-                    "(×<b style='color:lime'>1.25</b>) Has Discovery Traditions Tradition",
-                    "(×<b style='color:lime'>1.25</b>) Research Leader (Physics): <br/>    •   Is Particles Expert"
-                  ],
-                  "potential": [],
-                  "children": [
-                    {
-                      "key": "tech_gateway_activation",
-                      "name": "Gateway Activation",
-                      "description": "The ability to reactivate the derelict Gateway stations that can be found scattered throughout the galaxy has the potential to dramatically shorten travel times.",
-                      "area": "physics",
-                      "base_factor": 0.5,
-                      "base_weight": 17.5,
-                      "category": "Particles",
-                      "cost": 12000,
-                      "feature_unlocks": [
-                        "<b>Feature : </b>Gateway Travel"
-                      ],
-                      "is_dangerous": false,
-                      "is_rare": true,
-                      "is_start_tech": false,
-                      "prerequisites": [
-                        "tech_hyper_drive_3"
-                      ],
-                      "tier": 4,
-                      "prerequisites_names": [
-                        {
-                          "name": "Hyperspace Slipstreams",
-                          "key": "tech_hyper_drive_3"
-                        }
-                      ],
-                      "weight_modifiers": [
-                        "(×<b style='color:red'>0.1</b>) All must be false<br/>    •   Research Leader (Physics): <br/>\t    •   Is Particles Expert<br/>    •   Research Leader (Physics): <br/>\t    •   Is Curator<br/>    •   Research Leader (Physics): <br/>\t    •   Is Spark of Genius<br/>    •   Research Leader (Physics): <br/>\t    •   Is Maniacal",
-                        "(×<b style='color:lime'>1.25</b>) Has Discovery Traditions Tradition",
-                        "(×<b style='color:lime'>1.5</b>) Has Technological Ascendancy Ascension Perk",
-                        "(×<b style='color:lime'>1.25</b>) Research Leader (Physics): <br/>    •   Is Particles Expert",
-                        "(×<b style='color:red'>0.0</b>) All must be false<br/>    •   One must be true<br/>\t    •   Has encountered a Gateway<br/>\t    •   Has encountered a bypass_lgate<br/>    •   Any Country Relation<br/>\t    •   Is of country type: default<br/>\t    •   Has communication with our Empire<br/>\t    •   Has Technology: Gateway Activation",
-                        "(×<b style='color:lime'>4.0</b>) One must be true<br/>    •   Controls a system with a Gateway<br/>    •   Controls a system with a bypass_lgate"
-                      ],
-                      "potential": [],
-                      "children": [
-                        {
-                          "key": "tech_gateway_construction",
-                          "name": "Gateway Construction",
-                          "description": "The construction of new Gateway stations enables us to build a fast-travel network that could revolutionize interstellar travel.",
-                          "area": "physics",
-                          "base_factor": 0.5,
-                          "base_weight": 10000.0,
-                          "category": "Particles",
-                          "cost": 20000,
-                          "feature_unlocks": [
-                            "<b>Feature : </b>Gateway Construction"
-                          ],
-                          "is_dangerous": false,
-                          "is_rare": true,
-                          "is_start_tech": false,
-                          "prerequisites": [
-                            "tech_gateway_activation",
-                            "tech_mega_engineering"
-                          ],
-                          "tier": 5,
-                          "prerequisites_names": [
-                            {
-                              "name": "Gateway Activation",
-                              "key": "tech_gateway_activation"
-                            },
-                            {
-                              "name": "Mega-Engineering",
-                              "key": "tech_mega_engineering"
-                            }
-                          ],
-                          "weight_modifiers": [
-                            "(×<b style='color:red'>0.1</b>) All must be false<br/>    •   Research Leader (Physics): <br/>\t    •   Is Particles Expert<br/>    •   Research Leader (Physics): <br/>\t    •   Is Curator<br/>    •   Research Leader (Physics): <br/>\t    •   Is Spark of Genius<br/>    •   Research Leader (Physics): <br/>\t    •   Is Maniacal",
-                            "(×<b style='color:lime'>1.5</b>) Has Technological Ascendancy Ascension Perk",
-                            "(×<b style='color:lime'>1.25</b>) Has Discovery Traditions Tradition",
-                            "(×<b style='color:lime'>1.25</b>) Research Leader (Physics): <br/>    •   Is Particles Expert",
-                            "(×<b style='color:lime'>4.0</b>) Controls a system with a Gateway"
-                          ],
-                          "potential": [],
-                          "children": [],
-                          "is_event": false,
-                          "source": "vanilla"
-                        }
-                      ],
-                      "is_event": false,
-                      "source": "vanilla"
-                    }
-                  ],
-                  "is_event": false,
-                  "source": "vanilla"
-                },
-                {
-                  "key": "tech_wormhole_stabilization",
-                  "name": "Wormhole Stabilization",
-                  "description": "A naturally occurring subspace wormhole is a fickle thing, and its fluctuating energy levels typically make it impossible to travel safely between its linked apertures. There are ways to temporarily stabilize its matrix, however.",
-                  "area": "physics",
-                  "base_factor": 0.5,
-                  "base_weight": 32.5,
-                  "category": "Particles",
-                  "cost": 4000,
-                  "feature_unlocks": [
-                    "<b>Feature : </b>Wormhole Travel"
-                  ],
-                  "is_dangerous": false,
-                  "is_rare": true,
-                  "is_start_tech": false,
-                  "prerequisites": [
-                    "tech_hyper_drive_2"
-                  ],
-                  "tier": 3,
-                  "prerequisites_names": [
-                    {
-                      "name": "Hyperlane Breach Points",
-                      "key": "tech_hyper_drive_2"
-                    }
-                  ],
-                  "weight_modifiers": [
-                    "(×<b style='color:red'>0.5</b>) All must be false<br/>    •   Research Leader (Physics): <br/>\t    •   Is Particles Expert<br/>    •   Research Leader (Physics): <br/>\t    •   Is Curator<br/>    •   Research Leader (Physics): <br/>\t    •   Is Spark of Genius<br/>    •   Research Leader (Physics): <br/>\t    •   Is Maniacal",
-                    "(×<b style='color:lime'>1.25</b>) Has Discovery Traditions Tradition",
-                    "(×<b style='color:lime'>1.5</b>) Has Technological Ascendancy Ascension Perk",
-                    "(×<b style='color:lime'>1.25</b>) Research Leader (Physics): <br/>    •   Is Particles Expert",
-                    "(×<b style='color:red'>0.0</b>) All must be false<br/>    •   Has encountered a Natural Wormhole<br/>    •   Any Country Relation<br/>\t    •   Is of country type: default<br/>\t    •   Has communication with our Empire<br/>\t    •   Has Technology: Wormhole Stabilization",
-                    "(×<b style='color:lime'>4.0</b>) Controls a system with a Natural Wormhole"
-                  ],
-                  "potential": [],
-                  "children": [],
-                  "is_event": false,
-                  "source": "vanilla"
-                }
-              ],
-              "is_event": false,
-              "source": "vanilla"
-            },
-            {
-              "key": "tech_ftl_inhibitor",
-              "name": "FTL Inhibition",
-              "description": "Gravity well projectors can be used to create localized pockets of space where safe entry into hyperspace is impossible. The immense power requirements and the size of the projectors prohibits their use on anything smaller than a starbase.",
-              "area": "physics",
-              "base_factor": 4.0,
-              "base_weight": 340.0,
-              "category": "Particles",
-              "cost": 1500,
-              "feature_unlocks": [
-                "<b>Component</b>: FTL Inhibitor",
-                "<b>Feature : </b>Planetary FTL Inhibitors"
-              ],
-              "is_dangerous": false,
-              "is_rare": false,
-              "is_start_tech": false,
-              "prerequisites": [
-                "tech_hyper_drive_1"
-              ],
-              "tier": 2,
-              "prerequisites_names": [
-                {
-                  "name": "Hyperspace Travel",
-                  "key": "tech_hyper_drive_1"
-                }
-              ],
-              "weight_modifiers": [
-                "(×<b style='color:lime'>1.25</b>) Has Supremacy Traditions Tradition",
-                "(×<b style='color:lime'>1.25</b>) Research Leader (Physics): <br/>    •   Is Particles Expert"
-              ],
-              "potential": [],
-              "children": [],
-              "is_event": false,
-              "source": "vanilla"
-            }
-          ],
-          "is_event": false,
-          "source": "vanilla"
-        },
-        {
           "key": "tech_fission_power",
           "name": "Fission Power",
           "description": "This energy source generates power for ships through induced fission, but it also produces harmful nuclear waste.",
@@ -1299,6 +947,358 @@
                   "source": "vanilla"
                 }
               ],
+              "is_event": false,
+              "source": "vanilla"
+            }
+          ],
+          "is_event": false,
+          "source": "vanilla"
+        },
+        {
+          "key": "tech_reactor_boosters_1",
+          "name": "Reactor Boosters",
+          "description": "Additional power generation systems increase the ship's reactor output.",
+          "area": "physics",
+          "base_factor": 1.0,
+          "base_weight": 0.0,
+          "category": "Particles",
+          "cost": 0,
+          "feature_unlocks": [
+            "<b>Component</b>: Reactor Booster"
+          ],
+          "is_dangerous": false,
+          "is_rare": false,
+          "is_start_tech": true,
+          "prerequisites": [],
+          "tier": 0,
+          "prerequisites_names": [],
+          "weight_modifiers": [],
+          "potential": [],
+          "children": [
+            {
+              "key": "tech_reactor_boosters_2",
+              "name": "Improved Reactor Boosters",
+              "description": "The discovery of fusion power allows for better reactor boosters to be fitted onto our ships.",
+              "area": "physics",
+              "base_factor": 1.5,
+              "base_weight": 135.0,
+              "category": "Particles",
+              "cost": 1000,
+              "feature_unlocks": [
+                "<b>Component</b>: Improved Reactor Booster"
+              ],
+              "is_dangerous": false,
+              "is_rare": false,
+              "is_start_tech": false,
+              "prerequisites": [
+                "tech_reactor_boosters_1",
+                "tech_fusion_power"
+              ],
+              "tier": 1,
+              "prerequisites_names": [
+                {
+                  "name": "Fusion Power",
+                  "key": "tech_fusion_power"
+                },
+                {
+                  "name": "Reactor Boosters",
+                  "key": "tech_reactor_boosters_1"
+                }
+              ],
+              "weight_modifiers": [
+                "(×<b style='color:lime'>1.25</b>) Research Leader (Physics): <br/>    •   Is Particles Expert"
+              ],
+              "potential": [],
+              "children": [
+                {
+                  "key": "tech_reactor_boosters_3",
+                  "name": "Advanced Reactor Boosters",
+                  "description": "The discovery of antimatter power allows for highly advanced reactor boosters that can greatly enhance ship reactors.",
+                  "area": "physics",
+                  "base_factor": 1.5,
+                  "base_weight": 75.0,
+                  "category": "Particles",
+                  "cost": 6000,
+                  "feature_unlocks": [
+                    "<b>Component</b>: Advanced Reactor Booster"
+                  ],
+                  "is_dangerous": false,
+                  "is_rare": false,
+                  "is_start_tech": false,
+                  "prerequisites": [
+                    "tech_reactor_boosters_2",
+                    "tech_antimatter_power"
+                  ],
+                  "tier": 1,
+                  "prerequisites_names": [
+                    {
+                      "name": "Antimatter Power",
+                      "key": "tech_antimatter_power"
+                    },
+                    {
+                      "name": "Improved Reactor Boosters",
+                      "key": "tech_reactor_boosters_2"
+                    }
+                  ],
+                  "weight_modifiers": [
+                    "(×<b style='color:lime'>1.25</b>) Research Leader (Physics): <br/>    •   Is Particles Expert"
+                  ],
+                  "potential": [],
+                  "children": [],
+                  "is_event": false,
+                  "source": "vanilla"
+                }
+              ],
+              "is_event": false,
+              "source": "vanilla"
+            }
+          ],
+          "is_event": false,
+          "source": "vanilla"
+        },
+        {
+          "key": "tech_hyper_drive_1",
+          "name": "Hyperspace Travel",
+          "description": "Like the strands of a spider web, the extra-dimensional realm of hyperspace runs between the gravity wells of most stars. Faster than light travel is theoretically possible along these hyperlanes.",
+          "area": "physics",
+          "base_factor": 1.0,
+          "base_weight": 0.0,
+          "category": "Particles",
+          "cost": 0,
+          "feature_unlocks": [
+            "<b>Component</b>: Hyper Drive I"
+          ],
+          "is_dangerous": false,
+          "is_rare": false,
+          "is_start_tech": true,
+          "prerequisites": [],
+          "tier": 0,
+          "prerequisites_names": [],
+          "weight_modifiers": [],
+          "potential": [],
+          "children": [
+            {
+              "key": "tech_hyper_drive_2",
+              "name": "Hyperlane Breach Points",
+              "description": "We have identified the existence of points in space where a ship expends less energy to \"breach\" their way into a hyperlane. This will lead to a new generation of hyper drives.",
+              "area": "physics",
+              "base_factor": 1.0,
+              "base_weight": 75.0,
+              "category": "Particles",
+              "cost": 2000,
+              "feature_unlocks": [
+                "<b>Component</b>: Hyper Drive II",
+                "<b>Starbase Building</b>: Hyperlane Registrar"
+              ],
+              "is_dangerous": false,
+              "is_rare": false,
+              "is_start_tech": false,
+              "prerequisites": [
+                "tech_hyper_drive_1"
+              ],
+              "tier": 2,
+              "prerequisites_names": [
+                {
+                  "name": "Hyperspace Travel",
+                  "key": "tech_hyper_drive_1"
+                }
+              ],
+              "weight_modifiers": [
+                "(×<b style='color:lime'>1.25</b>) Has Discovery Traditions Tradition",
+                "(×<b style='color:lime'>1.25</b>) Research Leader (Physics): <br/>    •   Is Particles Expert"
+              ],
+              "potential": [],
+              "children": [
+                {
+                  "key": "tech_hyper_drive_3",
+                  "name": "Hyperspace Slipstreams",
+                  "description": "A new generation of hyper drives capable of accessing the subspace slipstreams that are present within hyperspace. This leads to dramatically improved drive performance.",
+                  "area": "physics",
+                  "base_factor": 1.0,
+                  "base_weight": 50.0,
+                  "category": "Particles",
+                  "cost": 6000,
+                  "feature_unlocks": [
+                    "<b>Component</b>: Hyper Drive III"
+                  ],
+                  "is_dangerous": false,
+                  "is_rare": false,
+                  "is_start_tech": false,
+                  "prerequisites": [
+                    "tech_hyper_drive_2"
+                  ],
+                  "tier": 3,
+                  "prerequisites_names": [
+                    {
+                      "name": "Hyperlane Breach Points",
+                      "key": "tech_hyper_drive_2"
+                    }
+                  ],
+                  "weight_modifiers": [
+                    "(×<b style='color:lime'>1.25</b>) Has Discovery Traditions Tradition",
+                    "(×<b style='color:lime'>1.25</b>) Research Leader (Physics): <br/>    •   Is Particles Expert"
+                  ],
+                  "potential": [],
+                  "children": [
+                    {
+                      "key": "tech_gateway_activation",
+                      "name": "Gateway Activation",
+                      "description": "The ability to reactivate the derelict Gateway stations that can be found scattered throughout the galaxy has the potential to dramatically shorten travel times.",
+                      "area": "physics",
+                      "base_factor": 0.5,
+                      "base_weight": 17.5,
+                      "category": "Particles",
+                      "cost": 12000,
+                      "feature_unlocks": [
+                        "<b>Feature : </b>Gateway Travel"
+                      ],
+                      "is_dangerous": false,
+                      "is_rare": true,
+                      "is_start_tech": false,
+                      "prerequisites": [
+                        "tech_hyper_drive_3"
+                      ],
+                      "tier": 4,
+                      "prerequisites_names": [
+                        {
+                          "name": "Hyperspace Slipstreams",
+                          "key": "tech_hyper_drive_3"
+                        }
+                      ],
+                      "weight_modifiers": [
+                        "(×<b style='color:red'>0.1</b>) All must be false<br/>    •   Research Leader (Physics): <br/>\t    •   Is Particles Expert<br/>    •   Research Leader (Physics): <br/>\t    •   Is Curator<br/>    •   Research Leader (Physics): <br/>\t    •   Is Spark of Genius<br/>    •   Research Leader (Physics): <br/>\t    •   Is Maniacal",
+                        "(×<b style='color:lime'>1.25</b>) Has Discovery Traditions Tradition",
+                        "(×<b style='color:lime'>1.25</b>) Research Leader (Physics): <br/>    •   Is Particles Expert",
+                        "(×<b style='color:lime'>1.5</b>) Has Technological Ascendancy Ascension Perk",
+                        "(×<b style='color:red'>0.0</b>) All must be false<br/>    •   One must be true<br/>\t    •   Has encountered a Gateway<br/>\t    •   Has encountered a bypass_lgate<br/>    •   Any Country Relation<br/>\t    •   Is of country type: default<br/>\t    •   Has communication with our Empire<br/>\t    •   Has Technology: Gateway Activation",
+                        "(×<b style='color:lime'>4.0</b>) One must be true<br/>    •   Controls a system with a Gateway<br/>    •   Controls a system with a bypass_lgate"
+                      ],
+                      "potential": [],
+                      "children": [
+                        {
+                          "key": "tech_gateway_construction",
+                          "name": "Gateway Construction",
+                          "description": "The construction of new Gateway stations enables us to build a fast-travel network that could revolutionize interstellar travel.",
+                          "area": "physics",
+                          "base_factor": 0.5,
+                          "base_weight": 10000.0,
+                          "category": "Particles",
+                          "cost": 20000,
+                          "feature_unlocks": [
+                            "<b>Feature : </b>Gateway Construction"
+                          ],
+                          "is_dangerous": false,
+                          "is_rare": true,
+                          "is_start_tech": false,
+                          "prerequisites": [
+                            "tech_gateway_activation",
+                            "tech_mega_engineering"
+                          ],
+                          "tier": 5,
+                          "prerequisites_names": [
+                            {
+                              "name": "Gateway Activation",
+                              "key": "tech_gateway_activation"
+                            },
+                            {
+                              "name": "Mega-Engineering",
+                              "key": "tech_mega_engineering"
+                            }
+                          ],
+                          "weight_modifiers": [
+                            "(×<b style='color:red'>0.1</b>) All must be false<br/>    •   Research Leader (Physics): <br/>\t    •   Is Particles Expert<br/>    •   Research Leader (Physics): <br/>\t    •   Is Curator<br/>    •   Research Leader (Physics): <br/>\t    •   Is Spark of Genius<br/>    •   Research Leader (Physics): <br/>\t    •   Is Maniacal",
+                            "(×<b style='color:lime'>1.25</b>) Has Discovery Traditions Tradition",
+                            "(×<b style='color:lime'>1.25</b>) Research Leader (Physics): <br/>    •   Is Particles Expert",
+                            "(×<b style='color:lime'>1.5</b>) Has Technological Ascendancy Ascension Perk",
+                            "(×<b style='color:lime'>4.0</b>) Controls a system with a Gateway"
+                          ],
+                          "potential": [],
+                          "children": [],
+                          "is_event": false,
+                          "source": "vanilla"
+                        }
+                      ],
+                      "is_event": false,
+                      "source": "vanilla"
+                    }
+                  ],
+                  "is_event": false,
+                  "source": "vanilla"
+                },
+                {
+                  "key": "tech_wormhole_stabilization",
+                  "name": "Wormhole Stabilization",
+                  "description": "A naturally occurring subspace wormhole is a fickle thing, and its fluctuating energy levels typically make it impossible to travel safely between its linked apertures. There are ways to temporarily stabilize its matrix, however.",
+                  "area": "physics",
+                  "base_factor": 0.5,
+                  "base_weight": 32.5,
+                  "category": "Particles",
+                  "cost": 4000,
+                  "feature_unlocks": [
+                    "<b>Feature : </b>Wormhole Travel"
+                  ],
+                  "is_dangerous": false,
+                  "is_rare": true,
+                  "is_start_tech": false,
+                  "prerequisites": [
+                    "tech_hyper_drive_2"
+                  ],
+                  "tier": 3,
+                  "prerequisites_names": [
+                    {
+                      "name": "Hyperlane Breach Points",
+                      "key": "tech_hyper_drive_2"
+                    }
+                  ],
+                  "weight_modifiers": [
+                    "(×<b style='color:red'>0.5</b>) All must be false<br/>    •   Research Leader (Physics): <br/>\t    •   Is Particles Expert<br/>    •   Research Leader (Physics): <br/>\t    •   Is Curator<br/>    •   Research Leader (Physics): <br/>\t    •   Is Spark of Genius<br/>    •   Research Leader (Physics): <br/>\t    •   Is Maniacal",
+                    "(×<b style='color:lime'>1.25</b>) Has Discovery Traditions Tradition",
+                    "(×<b style='color:lime'>1.5</b>) Has Technological Ascendancy Ascension Perk",
+                    "(×<b style='color:lime'>1.25</b>) Research Leader (Physics): <br/>    •   Is Particles Expert",
+                    "(×<b style='color:red'>0.0</b>) All must be false<br/>    •   Has encountered a Natural Wormhole<br/>    •   Any Country Relation<br/>\t    •   Is of country type: default<br/>\t    •   Has communication with our Empire<br/>\t    •   Has Technology: Wormhole Stabilization",
+                    "(×<b style='color:lime'>4.0</b>) Controls a system with a Natural Wormhole"
+                  ],
+                  "potential": [],
+                  "children": [],
+                  "is_event": false,
+                  "source": "vanilla"
+                }
+              ],
+              "is_event": false,
+              "source": "vanilla"
+            },
+            {
+              "key": "tech_ftl_inhibitor",
+              "name": "FTL Inhibition",
+              "description": "Gravity well projectors can be used to create localized pockets of space where safe entry into hyperspace is impossible. The immense power requirements and the size of the projectors prohibits their use on anything smaller than a starbase.",
+              "area": "physics",
+              "base_factor": 4.0,
+              "base_weight": 340.0,
+              "category": "Particles",
+              "cost": 1500,
+              "feature_unlocks": [
+                "<b>Component</b>: FTL Inhibitor",
+                "<b>Feature : </b>Planetary FTL Inhibitors"
+              ],
+              "is_dangerous": false,
+              "is_rare": false,
+              "is_start_tech": false,
+              "prerequisites": [
+                "tech_hyper_drive_1"
+              ],
+              "tier": 2,
+              "prerequisites_names": [
+                {
+                  "name": "Hyperspace Travel",
+                  "key": "tech_hyper_drive_1"
+                }
+              ],
+              "weight_modifiers": [
+                "(×<b style='color:lime'>1.25</b>) Has Supremacy Traditions Tradition",
+                "(×<b style='color:lime'>1.25</b>) Research Leader (Physics): <br/>    •   Is Particles Expert"
+              ],
+              "potential": [],
+              "children": [],
               "is_event": false,
               "source": "vanilla"
             }
@@ -1846,6 +1846,98 @@
           "source": "vanilla"
         },
         {
+          "key": "tech_pd_tracking_1",
+          "name": "Active Countermeasures",
+          "description": "The best defense is a good offense.",
+          "area": "physics",
+          "base_factor": 1.0,
+          "base_weight": 0.0,
+          "category": "Computing",
+          "cost": 0,
+          "feature_unlocks": [
+            "<b>Component</b>: Sentinel Point-Defense"
+          ],
+          "is_dangerous": false,
+          "is_rare": false,
+          "is_start_tech": true,
+          "prerequisites": [],
+          "tier": 0,
+          "prerequisites_names": [],
+          "weight_modifiers": [],
+          "potential": [],
+          "children": [
+            {
+              "key": "tech_pd_tracking_2",
+              "name": "Interlinked Support Systems",
+              "description": "Arrays of defensive armaments prove much more effective than independent countermeasures.",
+              "area": "physics",
+              "base_factor": 1.0,
+              "base_weight": 70.0,
+              "category": "Computing",
+              "cost": 2500,
+              "feature_unlocks": [
+                "<b>Component</b>: Barrier Point-Defense"
+              ],
+              "is_dangerous": false,
+              "is_rare": false,
+              "is_start_tech": false,
+              "prerequisites": [
+                "tech_pd_tracking_1"
+              ],
+              "tier": 2,
+              "prerequisites_names": [
+                {
+                  "name": "Active Countermeasures",
+                  "key": "tech_pd_tracking_1"
+                }
+              ],
+              "weight_modifiers": [
+                "(×<b style='color:lime'>1.25</b>) Research Leader (Physics): <br/>    •   Is Computing Expert"
+              ],
+              "potential": [],
+              "children": [
+                {
+                  "key": "tech_pd_tracking_3",
+                  "name": "Predictive Algorithms",
+                  "description": "Advanced prediction greatly increases the accuracy of active countermeasure systems.",
+                  "area": "physics",
+                  "base_factor": 1.0,
+                  "base_weight": 45.0,
+                  "category": "Computing",
+                  "cost": 8000,
+                  "feature_unlocks": [
+                    "<b>Component</b>: Guardian Point-Defense"
+                  ],
+                  "is_dangerous": false,
+                  "is_rare": false,
+                  "is_start_tech": false,
+                  "prerequisites": [
+                    "tech_pd_tracking_2"
+                  ],
+                  "tier": 4,
+                  "prerequisites_names": [
+                    {
+                      "name": "Interlinked Support Systems",
+                      "key": "tech_pd_tracking_2"
+                    }
+                  ],
+                  "weight_modifiers": [
+                    "(×<b style='color:lime'>1.25</b>) Research Leader (Physics): <br/>    •   Is Computing Expert"
+                  ],
+                  "potential": [],
+                  "children": [],
+                  "is_event": false,
+                  "source": "vanilla"
+                }
+              ],
+              "is_event": false,
+              "source": "vanilla"
+            }
+          ],
+          "is_event": false,
+          "source": "vanilla"
+        },
+        {
           "key": "tech_basic_science_lab_1",
           "name": "Scientific Method",
           "description": "Testable predictions of observable phenomena.",
@@ -1930,6 +2022,39 @@
                   ],
                   "potential": [],
                   "children": [
+                    {
+                      "key": "tech_auxiliary_fire_control",
+                      "name": "Auxiliary Fire-control",
+                      "description": "By installing an auxiliary fire-control system our ships can afford to make more advanced calculations, increasing accuracy.",
+                      "area": "physics",
+                      "base_factor": 1.0,
+                      "base_weight": 90.0,
+                      "category": "Computing",
+                      "cost": 1000,
+                      "feature_unlocks": [
+                        "<b>Component</b>: Auxiliary Fire-control"
+                      ],
+                      "is_dangerous": false,
+                      "is_rare": false,
+                      "is_start_tech": false,
+                      "prerequisites": [
+                        "tech_combat_computers_1"
+                      ],
+                      "tier": 1,
+                      "prerequisites_names": [
+                        {
+                          "name": "Specialized Combat Computers",
+                          "key": "tech_combat_computers_1"
+                        }
+                      ],
+                      "weight_modifiers": [
+                        "(×<b style='color:lime'>1.25</b>) Research Leader (Physics): <br/>    •   Is Computing Expert"
+                      ],
+                      "potential": [],
+                      "children": [],
+                      "is_event": false,
+                      "source": "vanilla"
+                    },
                     {
                       "key": "tech_combat_computers_2",
                       "name": "Extended Combat Algorithms",
@@ -2049,39 +2174,6 @@
                           "source": "vanilla"
                         }
                       ],
-                      "is_event": false,
-                      "source": "vanilla"
-                    },
-                    {
-                      "key": "tech_auxiliary_fire_control",
-                      "name": "Auxiliary Fire-control",
-                      "description": "By installing an auxiliary fire-control system our ships can afford to make more advanced calculations, increasing accuracy.",
-                      "area": "physics",
-                      "base_factor": 1.0,
-                      "base_weight": 90.0,
-                      "category": "Computing",
-                      "cost": 1000,
-                      "feature_unlocks": [
-                        "<b>Component</b>: Auxiliary Fire-control"
-                      ],
-                      "is_dangerous": false,
-                      "is_rare": false,
-                      "is_start_tech": false,
-                      "prerequisites": [
-                        "tech_combat_computers_1"
-                      ],
-                      "tier": 1,
-                      "prerequisites_names": [
-                        {
-                          "name": "Specialized Combat Computers",
-                          "key": "tech_combat_computers_1"
-                        }
-                      ],
-                      "weight_modifiers": [
-                        "(×<b style='color:lime'>1.25</b>) Research Leader (Physics): <br/>    •   Is Computing Expert"
-                      ],
-                      "potential": [],
-                      "children": [],
                       "is_event": false,
                       "source": "vanilla"
                     }
@@ -2368,98 +2460,6 @@
                     {
                       "name": "Colonial Centralization",
                       "key": "tech_colonial_centralization"
-                    }
-                  ],
-                  "weight_modifiers": [
-                    "(×<b style='color:lime'>1.25</b>) Research Leader (Physics): <br/>    •   Is Computing Expert"
-                  ],
-                  "potential": [],
-                  "children": [],
-                  "is_event": false,
-                  "source": "vanilla"
-                }
-              ],
-              "is_event": false,
-              "source": "vanilla"
-            }
-          ],
-          "is_event": false,
-          "source": "vanilla"
-        },
-        {
-          "key": "tech_pd_tracking_1",
-          "name": "Active Countermeasures",
-          "description": "The best defense is a good offense.",
-          "area": "physics",
-          "base_factor": 1.0,
-          "base_weight": 0.0,
-          "category": "Computing",
-          "cost": 0,
-          "feature_unlocks": [
-            "<b>Component</b>: Sentinel Point-Defense"
-          ],
-          "is_dangerous": false,
-          "is_rare": false,
-          "is_start_tech": true,
-          "prerequisites": [],
-          "tier": 0,
-          "prerequisites_names": [],
-          "weight_modifiers": [],
-          "potential": [],
-          "children": [
-            {
-              "key": "tech_pd_tracking_2",
-              "name": "Interlinked Support Systems",
-              "description": "Arrays of defensive armaments prove much more effective than independent countermeasures.",
-              "area": "physics",
-              "base_factor": 1.0,
-              "base_weight": 70.0,
-              "category": "Computing",
-              "cost": 2500,
-              "feature_unlocks": [
-                "<b>Component</b>: Barrier Point-Defense"
-              ],
-              "is_dangerous": false,
-              "is_rare": false,
-              "is_start_tech": false,
-              "prerequisites": [
-                "tech_pd_tracking_1"
-              ],
-              "tier": 2,
-              "prerequisites_names": [
-                {
-                  "name": "Active Countermeasures",
-                  "key": "tech_pd_tracking_1"
-                }
-              ],
-              "weight_modifiers": [
-                "(×<b style='color:lime'>1.25</b>) Research Leader (Physics): <br/>    •   Is Computing Expert"
-              ],
-              "potential": [],
-              "children": [
-                {
-                  "key": "tech_pd_tracking_3",
-                  "name": "Predictive Algorithms",
-                  "description": "Advanced prediction greatly increases the accuracy of active countermeasure systems.",
-                  "area": "physics",
-                  "base_factor": 1.0,
-                  "base_weight": 45.0,
-                  "category": "Computing",
-                  "cost": 8000,
-                  "feature_unlocks": [
-                    "<b>Component</b>: Guardian Point-Defense"
-                  ],
-                  "is_dangerous": false,
-                  "is_rare": false,
-                  "is_start_tech": false,
-                  "prerequisites": [
-                    "tech_pd_tracking_2"
-                  ],
-                  "tier": 4,
-                  "prerequisites_names": [
-                    {
-                      "name": "Interlinked Support Systems",
-                      "key": "tech_pd_tracking_2"
                     }
                   ],
                   "weight_modifiers": [
@@ -2844,6 +2844,40 @@
           "potential": [],
           "children": [
             {
+              "key": "tech_experimental_subspace_navigation",
+              "name": "Speculative Hyperlane Breaching",
+              "description": "Solitary Science Ships can break out of the naturally-occurring hyperlanes and attempt to navigate to known but otherwise unreachable destinations.",
+              "area": "physics",
+              "base_factor": 0.5,
+              "base_weight": 37.5,
+              "category": "Field Manipulation",
+              "cost": 2500,
+              "feature_unlocks": [
+                "<b>Feature : </b>Experimental Subspace Navigation"
+              ],
+              "is_dangerous": false,
+              "is_rare": true,
+              "is_start_tech": false,
+              "prerequisites": [
+                "tech_sensors_2"
+              ],
+              "tier": 2,
+              "prerequisites_names": [
+                {
+                  "name": "Gravitic Sensors",
+                  "key": "tech_sensors_2"
+                }
+              ],
+              "weight_modifiers": [
+                "(×<b style='color:lime'>1.5</b>) Has Technological Ascendancy Ascension Perk",
+                "(×<b style='color:lime'>1.25</b>) Research Leader (Physics): <br/>    •   Is Field Manipulation Expert"
+              ],
+              "potential": [],
+              "children": [],
+              "is_event": false,
+              "source": "vanilla"
+            },
+            {
               "key": "tech_sensors_3",
               "name": "Subspace Sensors",
               "description": "Sensors that detect the subspace fluctuations left in the wake of traveling starships. Their sensitivity and range is greater than that of a gravitic sensor array.",
@@ -2947,40 +2981,6 @@
               ],
               "is_event": false,
               "source": "vanilla"
-            },
-            {
-              "key": "tech_experimental_subspace_navigation",
-              "name": "Speculative Hyperlane Breaching",
-              "description": "Solitary Science Ships can break out of the naturally-occurring hyperlanes and attempt to navigate to known but otherwise unreachable destinations.",
-              "area": "physics",
-              "base_factor": 0.5,
-              "base_weight": 37.5,
-              "category": "Field Manipulation",
-              "cost": 2500,
-              "feature_unlocks": [
-                "<b>Feature : </b>Experimental Subspace Navigation"
-              ],
-              "is_dangerous": false,
-              "is_rare": true,
-              "is_start_tech": false,
-              "prerequisites": [
-                "tech_sensors_2"
-              ],
-              "tier": 2,
-              "prerequisites_names": [
-                {
-                  "name": "Gravitic Sensors",
-                  "key": "tech_sensors_2"
-                }
-              ],
-              "weight_modifiers": [
-                "(×<b style='color:lime'>1.5</b>) Has Technological Ascendancy Ascension Perk",
-                "(×<b style='color:lime'>1.25</b>) Research Leader (Physics): <br/>    •   Is Field Manipulation Expert"
-              ],
-              "potential": [],
-              "children": [],
-              "is_event": false,
-              "source": "vanilla"
             }
           ],
           "is_event": false,
@@ -3011,32 +3011,6 @@
           "children": [],
           "is_event": false,
           "is_machine_empire": true,
-          "source": "vanilla"
-        },
-        {
-          "key": "null_void_beam",
-          "name": "Null Void Beam",
-          "description": "By harnessing the entropic nature of the Null Void, this beam can actually destroy energy.",
-          "area": "physics",
-          "base_factor": 1.0,
-          "base_weight": 3.0,
-          "category": "Particles",
-          "cost": 750,
-          "feature_unlocks": [
-            "<b>Component</b>: Large Null Void Beam",
-            "<b>Component</b>: Medium Null Void Beam",
-            "<b>Component</b>: Small Null Void Beam"
-          ],
-          "is_dangerous": false,
-          "is_rare": true,
-          "is_start_tech": false,
-          "prerequisites": [],
-          "tier": 2,
-          "prerequisites_names": [],
-          "weight_modifiers": [],
-          "potential": [],
-          "children": [],
-          "is_event": false,
           "source": "vanilla"
         },
         {
@@ -3131,8 +3105,39 @@
           "source": "vanilla"
         },
         {
+          "key": "tech_archeology_lab_ancrel",
+          "name": "Curator Archaeology Lab",
+          "description": "A shipboard lab with advanced archaeological equipment, including a vast database supplied by the Curator Order where new discoveries can easily be cross-referenced.",
+          "area": "physics",
+          "base_factor": 1.0,
+          "base_weight": 85.0,
+          "category": "Computing",
+          "cost": 1500,
+          "feature_unlocks": [
+            "mod_country_ship_archeaological_site_clues_add +2"
+          ],
+          "is_dangerous": false,
+          "is_rare": true,
+          "is_start_tech": false,
+          "prerequisites": [],
+          "tier": 2,
+          "prerequisites_names": [],
+          "weight_modifiers": [
+            "(×<b style='color:red'>0.5</b>) Has the Curator Insight modifier",
+            "(×<b style='color:lime'>1.5</b>) Has Technological Ascendancy Ascension Perk",
+            "(×<b style='color:lime'>3.0</b>) Research Leader (Physics): <br/>    •   Is Curator",
+            "(×<b style='color:red'>0.0</b>) All must be false<br/>    •   Research Leader (Physics): <br/>\t    •   Is Curator<br/>    •   Has the Curator Insight modifier"
+          ],
+          "potential": [
+            "Has DLC Ancient Relics Story Pack"
+          ],
+          "children": [],
+          "is_event": false,
+          "source": "vanilla"
+        },
+        {
           "key": "tech_archeology_lab",
-          "name": "Curator Archeology Lab",
+          "name": "Curator Archaeology Lab",
           "description": "A shipboard lab with advanced archaeological equipment, including a vast database supplied by the Curator Order where new discoveries can easily be cross-referenced.",
           "area": "physics",
           "base_factor": 1.0,
@@ -3151,11 +3156,12 @@
           "prerequisites_names": [],
           "weight_modifiers": [
             "(×<b style='color:red'>0.5</b>) Has the Curator Insight modifier",
-            "(×<b style='color:lime'>1.5</b>) Has Technological Ascendancy Ascension Perk",
             "(×<b style='color:lime'>3.0</b>) Research Leader (Physics): <br/>    •   Is Curator",
             "(×<b style='color:red'>0.0</b>) All must be false<br/>    •   Research Leader (Physics): <br/>\t    •   Is Curator<br/>    •   Has the Curator Insight modifier"
           ],
-          "potential": [],
+          "potential": [
+            "Does NOT have DLC Ancient Relics Story Pack"
+          ],
           "children": [],
           "is_event": false,
           "source": "vanilla"

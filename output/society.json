@@ -364,87 +364,6 @@
           ],
           "children": [
             {
-              "key": "tech_cloning",
-              "name": "Cloning",
-              "description": "Breakthroughs in enucleation and artificial womb technology allows for the mass-production of individuals based on a common genetic template.",
-              "area": "society",
-              "base_factor": 1.5,
-              "base_weight": 112.5,
-              "category": "Biology",
-              "cost": 2000,
-              "feature_unlocks": [
-                "Pop Growth Speed +10%"
-              ],
-              "is_dangerous": false,
-              "is_rare": false,
-              "is_start_tech": false,
-              "prerequisites": [
-                "tech_genome_mapping"
-              ],
-              "tier": 2,
-              "prerequisites_names": [
-                {
-                  "name": "Genome Mapping",
-                  "key": "tech_genome_mapping"
-                }
-              ],
-              "weight_modifiers": [
-                "(×<b style='color:lime'>1.25</b>) Has Hive Mind Authority",
-                "(×<b style='color:lime'>1.25</b>) Has Supremacy Traditions Tradition",
-                "(×<b style='color:lime'>1.25</b>) Research Leader (Society): <br/>    •   Is Biology Expert"
-              ],
-              "potential": [
-                "One must be true\n    •   Does NOT have Machine Intelligence Authority\n    •   Has Government Civic: Driven Assimilator"
-              ],
-              "children": [
-                {
-                  "key": "tech_gene_banks",
-                  "name": "Gene Banks",
-                  "description": "Gene Banks filter and curate available genomes for deployment in clones.",
-                  "area": "society",
-                  "base_factor": 0.5,
-                  "base_weight": 35.0,
-                  "category": "Biology",
-                  "cost": 2500,
-                  "feature_unlocks": [
-                    "<b>Army</b>: Clone Army"
-                  ],
-                  "is_dangerous": false,
-                  "is_rare": true,
-                  "is_start_tech": false,
-                  "prerequisites": [
-                    "tech_cloning"
-                  ],
-                  "tier": 2,
-                  "prerequisites_names": [
-                    {
-                      "name": "Cloning",
-                      "key": "tech_cloning"
-                    }
-                  ],
-                  "weight_modifiers": [
-                    "(×<b style='color:lime'>1.25</b>) Has Hive Mind Authority",
-                    "(×<b style='color:red'>0.2</b>) All must be false<br/>    •   Research Leader (Society): <br/>\t    •   Is Biology Expert<br/>    •   Research Leader (Society): <br/>\t    •   Is Curator<br/>    •   Research Leader (Society): <br/>\t    •   Is Spark of Genius",
-                    "(×<b style='color:lime'>1.5</b>) Has Technological Ascendancy Ascension Perk",
-                    "(×<b style='color:lime'>1.5</b>) Research Leader (Society): <br/>    •   Skill level is greater than 4",
-                    "(×<b style='color:red'>0.75</b>) Research Leader (Society): <br/>    •   Skill level is lower than 2"
-                  ],
-                  "potential": [
-                    "One must be true\n    •   Does NOT have Machine Intelligence Authority\n    •   Has Government Civic: Driven Assimilator"
-                  ],
-                  "children": [],
-                  "is_event": false,
-                  "is_machine_empire": false,
-                  "is_drive_assimilator": true,
-                  "source": "vanilla"
-                }
-              ],
-              "is_event": false,
-              "is_machine_empire": false,
-              "is_drive_assimilator": true,
-              "source": "vanilla"
-            },
-            {
               "key": "tech_vitality_boosters",
               "name": "Vitality Boosters",
               "description": "Where the body fails, science intervenes.",
@@ -854,6 +773,87 @@
               "source": "vanilla"
             },
             {
+              "key": "tech_cloning",
+              "name": "Cloning",
+              "description": "Breakthroughs in enucleation and artificial womb technology allows for the mass-production of individuals based on a common genetic template.",
+              "area": "society",
+              "base_factor": 1.5,
+              "base_weight": 112.5,
+              "category": "Biology",
+              "cost": 2000,
+              "feature_unlocks": [
+                "Pop Growth Speed +10%"
+              ],
+              "is_dangerous": false,
+              "is_rare": false,
+              "is_start_tech": false,
+              "prerequisites": [
+                "tech_genome_mapping"
+              ],
+              "tier": 2,
+              "prerequisites_names": [
+                {
+                  "name": "Genome Mapping",
+                  "key": "tech_genome_mapping"
+                }
+              ],
+              "weight_modifiers": [
+                "(×<b style='color:lime'>1.25</b>) Has Hive Mind Authority",
+                "(×<b style='color:lime'>1.25</b>) Has Supremacy Traditions Tradition",
+                "(×<b style='color:lime'>1.25</b>) Research Leader (Society): <br/>    •   Is Biology Expert"
+              ],
+              "potential": [
+                "One must be true\n    •   Does NOT have Machine Intelligence Authority\n    •   Has Government Civic: Driven Assimilator"
+              ],
+              "children": [
+                {
+                  "key": "tech_gene_banks",
+                  "name": "Gene Banks",
+                  "description": "Gene Banks filter and curate available genomes for deployment in clones.",
+                  "area": "society",
+                  "base_factor": 0.5,
+                  "base_weight": 35.0,
+                  "category": "Biology",
+                  "cost": 2500,
+                  "feature_unlocks": [
+                    "<b>Army</b>: Clone Army"
+                  ],
+                  "is_dangerous": false,
+                  "is_rare": true,
+                  "is_start_tech": false,
+                  "prerequisites": [
+                    "tech_cloning"
+                  ],
+                  "tier": 2,
+                  "prerequisites_names": [
+                    {
+                      "name": "Cloning",
+                      "key": "tech_cloning"
+                    }
+                  ],
+                  "weight_modifiers": [
+                    "(×<b style='color:lime'>1.25</b>) Has Hive Mind Authority",
+                    "(×<b style='color:red'>0.2</b>) All must be false<br/>    •   Research Leader (Society): <br/>\t    •   Is Biology Expert<br/>    •   Research Leader (Society): <br/>\t    •   Is Curator<br/>    •   Research Leader (Society): <br/>\t    •   Is Spark of Genius",
+                    "(×<b style='color:lime'>1.5</b>) Has Technological Ascendancy Ascension Perk",
+                    "(×<b style='color:lime'>1.5</b>) Research Leader (Society): <br/>    •   Skill level is greater than 4",
+                    "(×<b style='color:red'>0.75</b>) Research Leader (Society): <br/>    •   Skill level is lower than 2"
+                  ],
+                  "potential": [
+                    "One must be true\n    •   Does NOT have Machine Intelligence Authority\n    •   Has Government Civic: Driven Assimilator"
+                  ],
+                  "children": [],
+                  "is_event": false,
+                  "is_machine_empire": false,
+                  "is_drive_assimilator": true,
+                  "source": "vanilla"
+                }
+              ],
+              "is_event": false,
+              "is_machine_empire": false,
+              "is_drive_assimilator": true,
+              "source": "vanilla"
+            },
+            {
               "key": "tech_subdermal_stimulation",
               "name": "Subdermal Stimulation",
               "description": "Deep-tissue implants are the latest innovation in the revolutionary overlapping of sensory engineering and entertainment experiences. \"Where we're going, we won't need skin to feel!\"",
@@ -991,6 +991,41 @@
                     "(×<b style='color:lime'>2.0</b>) Number of years since game start is greater than 35",
                     "(×<b style='color:lime'>2.0</b>) Number of years since game start is greater than 40",
                     "(×<b style='color:lime'>1.25</b>) Research Leader (Society): <br/>    •   Is Biology Expert"
+                  ],
+                  "potential": [],
+                  "children": [],
+                  "is_event": false,
+                  "source": "vanilla"
+                },
+                {
+                  "key": "tech_arcane_deciphering",
+                  "name": "Arcane Deciphering",
+                  "description": "Various artifacts and technologies functioning by arcane means that cannot be understood or replicated... at least not by conventional science as it is known to us.",
+                  "area": "society",
+                  "base_factor": 0.5,
+                  "base_weight": 35.0,
+                  "category": "Statecraft",
+                  "cost": 2500,
+                  "feature_unlocks": [
+                    "<b>Feature : </b>Reverse-Engineer Minor Artifacts"
+                  ],
+                  "is_dangerous": false,
+                  "is_rare": true,
+                  "is_start_tech": false,
+                  "prerequisites": [
+                    "tech_society_2"
+                  ],
+                  "tier": 2,
+                  "prerequisites_names": [
+                    {
+                      "name": "Xenobiology",
+                      "key": "tech_society_2"
+                    }
+                  ],
+                  "weight_modifiers": [
+                    "(×<b style='color:red'>0.0</b>) Does NOT have £minor_artifacts£ Minor Artifacts greater than 0",
+                    "(×<b style='color:red'>0.0</b>) Does NOT have DLC Ancient Relics Story Pack",
+                    "(×<b style='color:lime'>2.0</b>) Research Leader (Society): <br/>    •   Is Statecraft Expert"
                   ],
                   "potential": [],
                   "children": [],
@@ -1999,76 +2034,6 @@
               "source": "vanilla"
             },
             {
-              "key": "tech_dense_jungle",
-              "name": "Selective Defoliants",
-              "description": "Thorough cataloging, gene sequencing, and computer modeling of exobotanical ecosystems, coupled with gene editing and dispersal mechanisms, will allow us to reshape alien plant communities to our liking.",
-              "area": "society",
-              "base_factor": 2.0,
-              "base_weight": 190.0,
-              "category": "New Worlds",
-              "cost": 750,
-              "feature_unlocks": [],
-              "is_dangerous": false,
-              "is_rare": false,
-              "is_start_tech": false,
-              "prerequisites": [
-                "tech_colonization_1"
-              ],
-              "tier": 1,
-              "prerequisites_names": [
-                {
-                  "name": "New Worlds Protocol",
-                  "key": "tech_colonization_1"
-                }
-              ],
-              "weight_modifiers": [
-                "(×<b style='color:lime'>1.25</b>) Has Expansion Traditions Tradition",
-                "(×<b style='color:lime'>4.0</b>) Has Mastery of Nature Ascension Perk",
-                "(×<b style='color:red'>0.0</b>) No Owned Planet<br/>    •   Has deposit £blocker£ Dense Jungle",
-                "(×<b style='color:lime'>1.25</b>) Research Leader (Society): <br/>    •   Is New Worlds Expert",
-                "(×<b style='color:red'>0.0</b>) Number of owned planets is lower than 2"
-              ],
-              "potential": [],
-              "children": [],
-              "is_event": false,
-              "source": "vanilla"
-            },
-            {
-              "key": "tech_quicksand_basin",
-              "name": "Soil Remediation",
-              "description": "The process of soil deposition normally takes millions of years. With advanced fracking, chemical engineering, and hydraulic management technologies even the poorest substrate can be turned into fertile topsoil.",
-              "area": "society",
-              "base_factor": 2.0,
-              "base_weight": 190.0,
-              "category": "New Worlds",
-              "cost": 750,
-              "feature_unlocks": [],
-              "is_dangerous": false,
-              "is_rare": false,
-              "is_start_tech": false,
-              "prerequisites": [
-                "tech_colonization_1"
-              ],
-              "tier": 1,
-              "prerequisites_names": [
-                {
-                  "name": "New Worlds Protocol",
-                  "key": "tech_colonization_1"
-                }
-              ],
-              "weight_modifiers": [
-                "(×<b style='color:lime'>1.25</b>) Has Expansion Traditions Tradition",
-                "(×<b style='color:lime'>4.0</b>) Has Mastery of Nature Ascension Perk",
-                "(×<b style='color:red'>0.0</b>) No Owned Planet<br/>    •   Has deposit £blocker£ Quicksand Basin",
-                "(×<b style='color:lime'>1.25</b>) Research Leader (Society): <br/>    •   Is New Worlds Expert",
-                "(×<b style='color:red'>0.0</b>) Number of owned planets is lower than 2"
-              ],
-              "potential": [],
-              "children": [],
-              "is_event": false,
-              "source": "vanilla"
-            },
-            {
               "key": "tech_deep_sinkhole",
               "name": "Subterranean Colonization",
               "description": "Many planets exhibit extensive subsurface voids. Subterranean exploration, exploitation, and construction techniques can greatly increase the habitable area of some worlds.",
@@ -2165,6 +2130,76 @@
                 "(×<b style='color:lime'>1.25</b>) Has Expansion Traditions Tradition",
                 "(×<b style='color:lime'>4.0</b>) Has Mastery of Nature Ascension Perk",
                 "(×<b style='color:red'>0.0</b>) No Owned Planet<br/>    •   Has deposit £blocker£ Noxious Swamp",
+                "(×<b style='color:lime'>1.25</b>) Research Leader (Society): <br/>    •   Is New Worlds Expert",
+                "(×<b style='color:red'>0.0</b>) Number of owned planets is lower than 2"
+              ],
+              "potential": [],
+              "children": [],
+              "is_event": false,
+              "source": "vanilla"
+            },
+            {
+              "key": "tech_dense_jungle",
+              "name": "Selective Defoliants",
+              "description": "Thorough cataloging, gene sequencing, and computer modeling of exobotanical ecosystems, coupled with gene editing and dispersal mechanisms, will allow us to reshape alien plant communities to our liking.",
+              "area": "society",
+              "base_factor": 2.0,
+              "base_weight": 190.0,
+              "category": "New Worlds",
+              "cost": 750,
+              "feature_unlocks": [],
+              "is_dangerous": false,
+              "is_rare": false,
+              "is_start_tech": false,
+              "prerequisites": [
+                "tech_colonization_1"
+              ],
+              "tier": 1,
+              "prerequisites_names": [
+                {
+                  "name": "New Worlds Protocol",
+                  "key": "tech_colonization_1"
+                }
+              ],
+              "weight_modifiers": [
+                "(×<b style='color:lime'>1.25</b>) Has Expansion Traditions Tradition",
+                "(×<b style='color:lime'>4.0</b>) Has Mastery of Nature Ascension Perk",
+                "(×<b style='color:red'>0.0</b>) No Owned Planet<br/>    •   Has deposit £blocker£ Dense Jungle",
+                "(×<b style='color:lime'>1.25</b>) Research Leader (Society): <br/>    •   Is New Worlds Expert",
+                "(×<b style='color:red'>0.0</b>) Number of owned planets is lower than 2"
+              ],
+              "potential": [],
+              "children": [],
+              "is_event": false,
+              "source": "vanilla"
+            },
+            {
+              "key": "tech_quicksand_basin",
+              "name": "Soil Remediation",
+              "description": "The process of soil deposition normally takes millions of years. With advanced fracking, chemical engineering, and hydraulic management technologies even the poorest substrate can be turned into fertile topsoil.",
+              "area": "society",
+              "base_factor": 2.0,
+              "base_weight": 190.0,
+              "category": "New Worlds",
+              "cost": 750,
+              "feature_unlocks": [],
+              "is_dangerous": false,
+              "is_rare": false,
+              "is_start_tech": false,
+              "prerequisites": [
+                "tech_colonization_1"
+              ],
+              "tier": 1,
+              "prerequisites_names": [
+                {
+                  "name": "New Worlds Protocol",
+                  "key": "tech_colonization_1"
+                }
+              ],
+              "weight_modifiers": [
+                "(×<b style='color:lime'>1.25</b>) Has Expansion Traditions Tradition",
+                "(×<b style='color:lime'>4.0</b>) Has Mastery of Nature Ascension Perk",
+                "(×<b style='color:red'>0.0</b>) No Owned Planet<br/>    •   Has deposit £blocker£ Quicksand Basin",
                 "(×<b style='color:lime'>1.25</b>) Research Leader (Society): <br/>    •   Is New Worlds Expert",
                 "(×<b style='color:red'>0.0</b>) Number of owned planets is lower than 2"
               ],
@@ -2697,6 +2732,71 @@
           ],
           "is_event": false,
           "is_hive_empire": true,
+          "source": "vanilla"
+        },
+        {
+          "key": "tech_holo_entertainment",
+          "name": "Holo-Entertainment",
+          "description": "Pioneering use of holographic technology allows for the creation of artificial environments that seem as authentic as the real world. It is the next step of immersive entertainment.",
+          "area": "society",
+          "base_factor": 1.0,
+          "base_weight": 0.0,
+          "category": "Statecraft",
+          "cost": 0,
+          "feature_unlocks": [
+            "<b>Building</b>: Holo-Theatres"
+          ],
+          "is_dangerous": false,
+          "is_rare": false,
+          "is_start_tech": true,
+          "prerequisites": [],
+          "tier": 0,
+          "prerequisites_names": [],
+          "weight_modifiers": [],
+          "potential": [
+            "Does NOT have Gestalt Consciousness Ethic"
+          ],
+          "children": [
+            {
+              "key": "tech_hyper_entertainment_forum",
+              "name": "Hyper-Entertainment Forum",
+              "description": "These massive entertainment complexes is where dreams come true. Shopping malls, restaurants, amusement parks, virtual arcades, and more. You dream it - we are it!",
+              "area": "society",
+              "base_factor": 1.0,
+              "base_weight": 90.0,
+              "category": "Statecraft",
+              "cost": 1000,
+              "feature_unlocks": [
+                "<b>Building</b>: Hyper-Entertainment Forums"
+              ],
+              "is_dangerous": false,
+              "is_rare": false,
+              "is_start_tech": false,
+              "prerequisites": [
+                "tech_holo_entertainment"
+              ],
+              "tier": 1,
+              "prerequisites_names": [
+                {
+                  "name": "Holo-Entertainment",
+                  "key": "tech_holo_entertainment"
+                }
+              ],
+              "weight_modifiers": [
+                "(×<b style='color:red'>0.0</b>) All must be false<br/>    •   Has Technology: Exotic Gas Extraction<br/>    •   Has Technology: Exotic Gas Refining<br/>    •   Has the has_market_access country flag",
+                "(×<b style='color:lime'>1.25</b>) Research Leader (Society): <br/>    •   Is Statecraft Expert"
+              ],
+              "potential": [
+                "Does NOT have Gestalt Consciousness Ethic"
+              ],
+              "children": [],
+              "is_event": false,
+              "is_gestalt": false,
+              "source": "vanilla"
+            }
+          ],
+          "is_event": false,
+          "is_gestalt": false,
           "source": "vanilla"
         },
         {
@@ -3408,71 +3508,6 @@
                   "source": "vanilla"
                 }
               ],
-              "is_event": false,
-              "is_gestalt": false,
-              "source": "vanilla"
-            }
-          ],
-          "is_event": false,
-          "is_gestalt": false,
-          "source": "vanilla"
-        },
-        {
-          "key": "tech_holo_entertainment",
-          "name": "Holo-Entertainment",
-          "description": "Pioneering use of holographic technology allows for the creation of artificial environments that seem as authentic as the real world. It is the next step of immersive entertainment.",
-          "area": "society",
-          "base_factor": 1.0,
-          "base_weight": 0.0,
-          "category": "Statecraft",
-          "cost": 0,
-          "feature_unlocks": [
-            "<b>Building</b>: Holo-Theatres"
-          ],
-          "is_dangerous": false,
-          "is_rare": false,
-          "is_start_tech": true,
-          "prerequisites": [],
-          "tier": 0,
-          "prerequisites_names": [],
-          "weight_modifiers": [],
-          "potential": [
-            "Does NOT have Gestalt Consciousness Ethic"
-          ],
-          "children": [
-            {
-              "key": "tech_hyper_entertainment_forum",
-              "name": "Hyper-Entertainment Forum",
-              "description": "These massive entertainment complexes is where dreams come true. Shopping malls, restaurants, amusement parks, virtual arcades, and more. You dream it - we are it!",
-              "area": "society",
-              "base_factor": 1.0,
-              "base_weight": 90.0,
-              "category": "Statecraft",
-              "cost": 1000,
-              "feature_unlocks": [
-                "<b>Building</b>: Hyper-Entertainment Forums"
-              ],
-              "is_dangerous": false,
-              "is_rare": false,
-              "is_start_tech": false,
-              "prerequisites": [
-                "tech_holo_entertainment"
-              ],
-              "tier": 1,
-              "prerequisites_names": [
-                {
-                  "name": "Holo-Entertainment",
-                  "key": "tech_holo_entertainment"
-                }
-              ],
-              "weight_modifiers": [
-                "(×<b style='color:red'>0.0</b>) All must be false<br/>    •   Has Technology: Exotic Gas Extraction<br/>    •   Has Technology: Exotic Gas Refining<br/>    •   Has the has_market_access country flag",
-                "(×<b style='color:lime'>1.25</b>) Research Leader (Society): <br/>    •   Is Statecraft Expert"
-              ],
-              "potential": [
-                "Does NOT have Gestalt Consciousness Ethic"
-              ],
-              "children": [],
               "is_event": false,
               "is_gestalt": false,
               "source": "vanilla"
@@ -4353,33 +4388,6 @@
           "source": "vanilla"
         },
         {
-          "key": "tech_housing_agrarian_idyll",
-          "name": "Agrarian Utopias",
-          "description": "Through the establishment of weather-controlled rural communes, we can support a larger population without disrupting our agrarian way of life.",
-          "area": "society",
-          "base_factor": 1.5,
-          "base_weight": 97.5,
-          "category": "Statecraft",
-          "cost": 4000,
-          "feature_unlocks": [
-            "Agriculture District Housing: +1"
-          ],
-          "is_dangerous": false,
-          "is_rare": false,
-          "is_start_tech": false,
-          "prerequisites": [],
-          "tier": 3,
-          "prerequisites_names": [],
-          "weight_modifiers": [
-            "(×<b style='color:red'>0.0</b>) Does NOT have Government Civic: Agrarian Idyll",
-            "(×<b style='color:lime'>1.25</b>) Research Leader (Society): <br/>    •   Is Statecraft Expert"
-          ],
-          "potential": [],
-          "children": [],
-          "is_event": false,
-          "source": "vanilla"
-        },
-        {
           "key": "tech_xeno_tourism_agency",
           "name": "Xeno Outreach Agencies",
           "description": "This corporate agency promotes a wide variety of interstellar tourist attractions, as well as offering employment packages and signing bonuses to potential emigrants interested in relocating to corporate space.",
@@ -4435,6 +4443,33 @@
           "children": [],
           "is_event": false,
           "is_megacorp": true,
+          "source": "vanilla"
+        },
+        {
+          "key": "tech_housing_agrarian_idyll",
+          "name": "Agrarian Utopias",
+          "description": "Through the establishment of weather-controlled rural communes, we can support a larger population without disrupting our agrarian way of life.",
+          "area": "society",
+          "base_factor": 1.5,
+          "base_weight": 97.5,
+          "category": "Statecraft",
+          "cost": 4000,
+          "feature_unlocks": [
+            "Agriculture District Housing: +1"
+          ],
+          "is_dangerous": false,
+          "is_rare": false,
+          "is_start_tech": false,
+          "prerequisites": [],
+          "tier": 3,
+          "prerequisites_names": [],
+          "weight_modifiers": [
+            "(×<b style='color:red'>0.0</b>) Does NOT have Government Civic: Agrarian Idyll",
+            "(×<b style='color:lime'>1.25</b>) Research Leader (Society): <br/>    •   Is Statecraft Expert"
+          ],
+          "potential": [],
+          "children": [],
+          "is_event": false,
           "source": "vanilla"
         },
         {

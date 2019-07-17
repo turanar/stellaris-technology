@@ -38,7 +38,6 @@ public class App {
     public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
         return args -> {
             vanilla.read("files");
-            gigaStructure.read("gigastructure");
         };
     }
 }

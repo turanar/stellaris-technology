@@ -37,6 +37,7 @@ public enum ModifierType {
     is_egalitarian(DefaultParser.SCRIPTED),
     is_authoritarian(DefaultParser.SCRIPTED),
     is_militarist(DefaultParser.SCRIPTED),
+    is_xenophobe(DefaultParser.SCRIPTED),
 
     is_spiritualist(DefaultParser.SCRIPTED),
     is_gestalt(DefaultParser.SCRIPTED),
@@ -46,6 +47,7 @@ public enum ModifierType {
     is_hive_empire(DefaultParser.SCRIPTED),
     is_megacorp(DefaultParser.SCRIPTED),
     allows_slavery(DefaultParser.SCRIPTED),
+    has_ancrel(DefaultParser.SCRIPTED),
 
     is_ai("Is AI|Is NOT AI", DefaultParser.SIMPLE_BOOLEAN),
 

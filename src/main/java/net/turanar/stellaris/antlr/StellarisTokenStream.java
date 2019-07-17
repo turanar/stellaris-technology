@@ -19,6 +19,8 @@ public class StellarisTokenStream extends CommonTokenStream {
             for(String line : lines) {
                 line = line.replaceAll("\"(north|east|west|south|mid|bow|stern|core|ship|bot_1|bot_2|bot_3)\"","$1");
                 line = line.replaceAll("\"(\\d)\"","fix_$1");
+                line = line.replaceAll("hidden:","");
+                line = line.replaceAll("\\$([^\\$]*\\|[^\\$]*|[^\\$]*)\\$","ARG1");
                 line = line.replaceAll("event_target:","");
 
                 if(!line.startsWith("#")) output.add(line);

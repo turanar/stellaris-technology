@@ -14,7 +14,9 @@ public enum GameObject {
     //BUILDABLE_POP("Buildable Pop","common/buildable_pops"),
     //TILE_BLOCKER("Clear Blockers", "common/tile_blockers"),
     SHIP_SIZE("Ship Size", "common/ship_sizes","","00_ship_sizes.txt"),
-    STARBASE("Starbase Upgrade", "common/ship_sizes","","00_starbases.txt");
+    STARBASE("Starbase Upgrade", "common/ship_sizes","","00_starbases.txt"),
+    MEGASTRUCTURE("Mega-Structure", "common/megastructures");
+
 
     public String folder;
     public String label;
