@@ -31,6 +31,35 @@ public enum ModifierType {
     owns_any_bypass((p) -> f("Controls a system with a %s", i18n("bypass_" + gs(p).toLowerCase()))),
     has_seen_any_bypass((p) -> f("Has encountered a %s", i18n("bypass_" + gs(p).toLowerCase()))),
 
+    // FIXME: proper parsing of the following
+    count_archaeological_site((p)->{
+        String type = "";
+        String count = "";
+        for(PairContext prop : p.value().map().pair()) {
+            if(key(prop).equals("type")) {
+                type = i18n(gs(prop));
+            } else if (key(prop).equals("value")) {
+                count = op(prop) + " " + gs(prop);
+            }
+        }
+        return "Number of " + type + " is " + count;
+    }),
+    exists("Exists"),
+    federation(DefaultParser.SCRIPTED),
+    has_federation("Has %s federation"),
+    has_first_contact_dlc("Has DLC First Contact"),
+    has_nemesis(DefaultParser.SCRIPTED),
+    has_origin("Has %s federation"),
+    has_paragon_dlc("Has DLC galactic paragons"),
+    has_trait_in_council(DefaultParser.SCRIPTED),
+    is_eager_explorer_empire(DefaultParser.SCRIPTED),
+    is_same_value(DefaultParser.SCRIPTED),
+    is_specialist_subject_type(DefaultParser.SCRIPTED),
+    mid_game_years_passed(DefaultParser.SCRIPTED),
+    num_buildings(DefaultParser.SCRIPTED),
+    // until here
+
+
     is_xenophile(DefaultParser.SCRIPTED),
     is_pacifist(DefaultParser.SCRIPTED),
     is_materialist(DefaultParser.SCRIPTED),
