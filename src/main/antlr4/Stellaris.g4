@@ -20,6 +20,10 @@ array
    : '{' value+ '}'
    ;
 
+valueSpec
+   : BAREWORD ':' BAREWORD (( '|' BAREWORD )* '|')?
+   ;
+
 value
    : NUMBER
    | BOOLEAN
@@ -27,6 +31,7 @@ value
    | STRING
    | VARIABLE
    | BAREWORD
+   | valueSpec
    | map
    | array
    ;
