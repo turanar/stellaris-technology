@@ -27,12 +27,14 @@ jobs:
     - name: Build with Maven
       run: mvn -B package
 
-    # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
-    - name: Update dependency graph
-      uses: advanced-security/maven-dependency-submission-action@571e99aab1055c2e71a1e2309b9691de18d6b7d6
-
     - name: Upload built jar as CI artifact
       uses: actions/upload-artifact@v3
       with:
         name: jar
         path: target/*.jar
+
+    - name: From tags, create GH release and attach built jar
+      uses: softprops/action-gh-release@v1
+      if: startsWith(github.ref, 'refs/tags/')
+      with:
+        files: target/*.jar
