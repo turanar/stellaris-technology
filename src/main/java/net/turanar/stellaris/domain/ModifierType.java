@@ -45,18 +45,18 @@ public enum ModifierType {
         return "Number of " + type + " is " + count;
     }),
     exists("Exists"),
-    federation(DefaultParser.SCRIPTED),
+    federation("Is Federation"),
     has_federation("Has %s federation"),
     has_first_contact_dlc("Has DLC First Contact"),
-    has_nemesis(DefaultParser.SCRIPTED),
+    has_nemesis("Has Nemesis"),
     has_origin("Has %s federation"),
     has_paragon_dlc("Has DLC galactic paragons"),
-    has_trait_in_council(DefaultParser.SCRIPTED),
-    is_eager_explorer_empire(DefaultParser.SCRIPTED),
-    is_same_value(DefaultParser.SCRIPTED),
-    is_specialist_subject_type(DefaultParser.SCRIPTED),
-    mid_game_years_passed(DefaultParser.SCRIPTED),
-    num_buildings(DefaultParser.SCRIPTED),
+    has_trait_in_council("Has trait %s in council"),
+    is_eager_explorer_empire("Is eager explorer empire"),
+    is_same_value("IS SAME VALUE"),
+    is_specialist_subject_type("Is specialist subject"),
+    mid_game_years_passed("In Mid-game"),
+    num_buildings("Has %s buildings"),
     // until here
 
 
