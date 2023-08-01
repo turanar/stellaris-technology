@@ -10,6 +10,7 @@ import org.springframework.context.annotation.Configuration;
 import org.yaml.snakeyaml.Yaml;
 
 import java.io.IOException;
+import java.lang.RuntimeException;
 import java.util.HashMap;
 import java.util.Collections;
 import java.util.Map;
@@ -25,11 +26,21 @@ public class Config {
         HashMap<String,String> retval = new HashMap<>();
 
         parse("files/common/scripted_variables", "txt", p -> {
-            factory.getParser(p).file().var().forEach(v -> retval.put(v.VARIABLE().getText(), v.NUMBER().getText()));
+            try {
+                factory.getParser(p).file().var().forEach(v -> retval.put(v.VARIABLE().getText(), v.NUMBER().getText()));
+            }
+            catch (RuntimeException e) {
+                throw new RuntimeException("Error parsing file " + p.toString(), e);
+            }
         });
 
         parse("files/common/technology", "txt", p -> {
-            factory.getParser(p).file().var().forEach(v -> retval.put(v.VARIABLE().getText(), v.NUMBER().getText()));
+            try {
+                factory.getParser(p).file().var().forEach(v -> retval.put(v.VARIABLE().getText(), v.NUMBER().getText()));
+            }
+            catch (RuntimeException e) {
+                throw new RuntimeException("Error parsing file " + p.toString(), e);
+            }
         });
 
         return retval;
