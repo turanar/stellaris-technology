@@ -11,6 +11,7 @@ import org.yaml.snakeyaml.Yaml;
 
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.Collections;
 import java.util.Map;
 import static net.turanar.stellaris.Global.*;
 
@@ -42,9 +43,12 @@ public class Config {
             Yaml yaml = new Yaml();
             Iterable<Object> data = yaml.loadAll(new StellarisYamlReader(path));
             Map<String,Map<Object,Object>> map = (Map<String,Map<Object,Object>>)data.iterator().next();
-            map.get("l_english").forEach((k, v) -> {
-                retval.put(k.toString().toLowerCase(), v.toString());
-            });
+            Map english_l10n = map.getOrDefault("l_english", Collections.emptyMap());
+            if (english_l10n != null) {
+                english_l10n.forEach((k, v) -> {
+                    retval.put(k.toString().toLowerCase(), v.toString());
+                });
+            };
         });
 
         return retval;
