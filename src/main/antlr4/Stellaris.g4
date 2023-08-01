@@ -5,7 +5,7 @@ file
    ;
 
 map
-   : '{' (pair)* '}'
+   : '{' (pair | 'optimize_memory' )* '}'
    ;
 
 pair
