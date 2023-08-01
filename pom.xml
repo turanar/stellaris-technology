@@ -47,6 +47,26 @@
     <build>
         <plugins>
             <plugin>
+              <groupId>org.antlr</groupId>
+              <artifactId>antlr4-maven-plugin</artifactId>
+              <version>4.3</version>
+              <executions>
+                <execution>
+                  <goals>
+                    <goal>antlr4</goal>
+                  </goals>
+                  <configuration>
+                      <visitor>true</visitor>
+                      <arguments>
+                          <argument>-package</argument>
+                          <argument>net.turanar.stellaris.antlr</argument>
+                      </arguments>
+                  </configuration>
+                </execution>
+              </executions>
+            </plugin>
+            
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.0</version>
