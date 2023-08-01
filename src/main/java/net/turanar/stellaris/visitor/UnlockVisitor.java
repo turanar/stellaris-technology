@@ -27,38 +27,38 @@ public class UnlockVisitor {
     }
 
     public Technology visitPair(GameObject type, StellarisParser.PairContext pair) {
-        String key = pair.key();
+        String tkey = key(pair);
         if(type == GameObject.STARBASE) {
-            //System.out.println(key);
+            //System.out.println(tkey);
         }
         Technology tech = null;
         if(pair.value().map() == null) return null;
 
         for(StellarisParser.PairContext props : pair.value().map().pair()) {
-            if(props.key().equals("prerequisites")) {
+            if(key(props).equals("prerequisites")) {
                 if(props.value().array() == null) continue;
                 for(StellarisParser.ValueContext ctx : props.value().array().value()) {
                     tech = technologies.get(gs(ctx));
                 }
-            } else if (props.key().equals("key") || props.key().equals("name")) {
-                key = gs(props.value());
-            } else if (props.key().equals("show_in_tech")) {
+            } else if (key(props).equals("key") || key(props).equals("name")) {
+                tkey = gs(props.value());
+            } else if (key(props).equals("show_in_tech")) {
                 tech = technologies.get(gs(props.value()));
-            } else if (props.key().equals("option") && type == GameObject.POLICY) {
-                key = null;
+            } else if (key(props).equals("option") && type == GameObject.POLICY) {
+                tkey = null;
                 tech = visitPair(type, props);
             }
         }
 
-        if(key == null) return tech;
+        if(tkey == null) return tech;
 
-        if(i18n(key).equals(key)) {
-            key = i18n(type.locale_prefix + key);
+        if(i18n(tkey).equals(tkey)) {
+            tkey = i18n(type.locale_prefix + tkey);
         } else {
-            key = i18n(key);
+            tkey = i18n(tkey);
         }
 
-        if(tech != null) tech.feature_unlocks.add(clean("<b>" + type.label + "</b>: " + key));
+        if(tech != null) tech.feature_unlocks.add(clean("<b>" + type.label + "</b>: " + tkey));
 
         return tech;
     }

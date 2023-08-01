@@ -70,7 +70,7 @@ public class Config {
         Map<String, StellarisParser.PairContext> retval = new HashMap<>();
 
         parse("files/common/scripted_triggers", "txt", path -> {
-            factory.getParser(path).file().pair().forEach(pair -> retval.put(pair.key(), pair));
+            factory.getParser(path).file().pair().forEach(pair -> retval.put(key(pair), pair));
         });
 
         return retval;

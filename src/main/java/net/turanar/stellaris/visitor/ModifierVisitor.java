@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static net.turanar.stellaris.Global.gs;
+import static net.turanar.stellaris.Global.key;
 
 @Component
 public class ModifierVisitor {
@@ -21,7 +22,7 @@ public class ModifierVisitor {
         ctx.value().map().pair().forEach(p -> {
             try {
                 Modifier m = new Modifier();
-                m.type = ModifierType.valueOf(p.key());
+                m.type = ModifierType.valueOf(key(p));
                 m.pair = p;
                 retval.add(m);
             } catch (IllegalArgumentException e) {
@@ -34,7 +35,7 @@ public class ModifierVisitor {
     public List<WeightModifier> visitPair(Technology tech, StellarisParser.PairContext ctx) {
         List<WeightModifier> retval = new ArrayList<WeightModifier>();
         ctx.value().map().pair().forEach(p -> {
-            switch(p.key()) {
+            switch(key(p)) {
                 case "factor": tech.base_factor = Float.valueOf(gs(p)); break;
                 case "modifier":
                     WeightModifier m = visitModifier(p);
@@ -50,11 +51,11 @@ public class ModifierVisitor {
         WeightModifier retval = new WeightModifier();
         ctx.value().map().pair().forEach(p -> {
             try {
-                switch(p.key()) {
+                switch(key(p)) {
                     case "factor": retval.factor = Float.valueOf(gs(p)); break;
                     case "add": retval.add = Integer.valueOf(gs(p)); break;
                     default:
-                        retval.type = ModifierType.valueOf(p.key());
+                        retval.type = ModifierType.valueOf(key(p));
                         retval.pair = p;
                 }
             } catch (IllegalArgumentException e) {

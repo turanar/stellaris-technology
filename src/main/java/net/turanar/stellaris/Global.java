@@ -74,6 +74,10 @@ public class Global {
         return null;
     }
 
+    public static String key(StellarisParser.PairContext pair) {
+        return pair.BAREWORD().getText();
+    }
+
     public static String variable(String key) {
         return GLOBAL_VARIABLES.get(key);
     }

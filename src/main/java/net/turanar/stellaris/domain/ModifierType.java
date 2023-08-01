@@ -103,9 +103,9 @@ public enum ModifierType {
         String type = "";
         String count = "";
         for(PairContext prop : p.value().map().pair()) {
-            if(prop.key().equals("type")) {
+            if(key(prop).equals("type")) {
                 type = gs(prop);
-            } else if (prop.key().equals("amount")) {
+            } else if (key(prop).equals("amount")) {
                 count = op(prop) + " " + gs(prop);
             }
         }
@@ -116,9 +116,9 @@ public enum ModifierType {
         String retval = "Number of %s is %s %s";
         String size = null, operator = null, count = null;
         for(PairContext prop : p.value().map().pair()) {
-            if(prop.key().equals("starbase_size")) {
+            if(key(prop).equals("starbase_size")) {
                 size = i18n(gs(prop));
-            } else if (prop.key().equals("count")) {
+            } else if (key(prop).equals("count")) {
                 operator = op(prop);
                 count = gs(prop);
             }
@@ -130,9 +130,9 @@ public enum ModifierType {
         String type = "";
         String count = "";
         for(PairContext prop : p.value().map().pair()) {
-            if(prop.key().equals("type")) {
+            if(key(prop).equals("type")) {
                 type = i18n(gs(prop));
-            } else if (prop.key().equals("value")) {
+            } else if (key(prop).equals("value")) {
                 count = op(prop) + " " + gs(prop);
             }
         }
@@ -143,12 +143,12 @@ public enum ModifierType {
         String limits = "";
         String count = "";
         for(PairContext prop : p.value().map().pair()) {
-            if(prop.key().equals("limit")) {
+            if(key(prop).equals("limit")) {
                 for(PairContext l : prop.value().map().pair()) {
                     Modifier m = visitCondition(l);
                     limits += "\n" + LS + m.toString();
                 }
-            } else if(prop.key().equals("count")) {
+            } else if(key(prop).equals("count")) {
                 count = op(prop) + " " + gs(prop);
             }
         }
@@ -202,7 +202,7 @@ public enum ModifierType {
             return retval;
         }),
         SCRIPTED((format, p) -> {
-            PairContext q = GLOBAL_TRIGGERS.get(p.key());
+            PairContext q = GLOBAL_TRIGGERS.get(key(p));
             boolean value = gs(p).equals("yes");
             List<String> conditions = new ArrayList<>();
 
@@ -270,7 +270,7 @@ public enum ModifierType {
 
     public static Modifier visitCondition(PairContext pair) {
         Modifier retval = new Modifier();
-        retval.type = ModifierType.value(pair.key());
+        retval.type = ModifierType.value(key(pair));
         retval.pair = pair;
         return retval;
     }
