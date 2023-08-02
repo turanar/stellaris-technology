@@ -57,6 +57,17 @@ public enum ModifierType {
     is_specialist_subject_type("Is specialist subject"),
     mid_game_years_passed("In Mid-game"),
     num_buildings("Has %s buildings"),
+    count_owned_pop("Owns %s pops"),
+    harvested_leviathan_dna("Has harvested leviathan DNA"),
+    has_lithoids("Has Lithoids"),
+    has_overlord_dlc("Has DLC Overlord"),
+    has_plantoids("Has Plantoids"),
+    has_relic("Has Relic"),
+    has_space_monster_dlc("Has DLC Space Monsters"),
+    is_catalytic_empire("Is Catalytic Empire"),
+    is_galactic_community_member("Is member of the galactic community"),
+    is_homicidal("Is homicidal"),
+    is_lithoid_empire("Is lithoid empire"),
     // until here
 
 
