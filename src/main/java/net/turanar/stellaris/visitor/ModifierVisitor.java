@@ -52,7 +52,11 @@ public class ModifierVisitor {
         ctx.value().map().pair().forEach(p -> {
             try {
                 switch(key(p)) {
-                    case "factor": retval.factor = Float.valueOf(gs(p)); break;
+                    case "factor":
+                        String _gs = gs(p);
+                        if (_gs != null)
+                            retval.factor = Float.valueOf(_gs);
+                        break;
                     case "add": retval.add = Integer.valueOf(gs(p)); break;
                     default:
                         retval.type = ModifierType.valueOf(key(p));

@@ -16,6 +16,6 @@ public class Modifier {
 
     @Override
     public String toString() {
-        return type != null && pair != null ? type.parse(pair) : (pair != null ? pair.getText() : "");
+        return type != null && pair != null ? type.parse(pair) : (pair != null ? pair.getText() : "??");
     }
 }
