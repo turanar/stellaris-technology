@@ -10,6 +10,7 @@ map
 
 pair
    : BAREWORD SPECIFIER value
+   | NUMBER SPECIFIER value
    ;
 
 var
