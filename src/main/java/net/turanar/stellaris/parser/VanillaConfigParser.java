@@ -47,7 +47,7 @@ public class VanillaConfigParser extends AbstractConfigParser {
             try {
                 parse(folder + "/" + type.folder, "txt", path -> {
                     try {
-                        if (path.getFileName().toString().startsWith("README")) return;
+                        if (path.getFileName().toString().contains("README")) return;
                         if (!path.getFileName().toString().endsWith(type.filter)) return;
                         unlockVisitor.visitFile(type, factory.getParser(path).file());
                     }
