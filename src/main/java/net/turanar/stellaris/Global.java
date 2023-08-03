@@ -31,6 +31,7 @@ public class Global {
     }
 
     public static String i18n(String key) {
+        if(key == null) return null;
         String retval = GLOBAL_STRINGS.get(key.toLowerCase());
         if(retval == null) return key;
         if(retval.contains("$")) {
