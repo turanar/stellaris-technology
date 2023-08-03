@@ -5,11 +5,12 @@ file
    ;
 
 map
-   : '{' (pair)* '}'
+   : '{' (pair | 'optimize_memory' )* '}'
    ;
 
 pair
    : BAREWORD SPECIFIER value
+   | NUMBER SPECIFIER value
    ;
 
 var
@@ -20,6 +21,10 @@ array
    : '{' value+ '}'
    ;
 
+valueSpec
+   : BAREWORD ':' BAREWORD (( '|' BAREWORD )* '|')?
+   ;
+
 value
    : NUMBER
    | BOOLEAN
@@ -27,6 +32,7 @@ value
    | STRING
    | VARIABLE
    | BAREWORD
+   | valueSpec
    | map
    | array
    ;
@@ -43,7 +49,7 @@ VARIABLE
    ;
 
 SPECIFIER
-   : '=' | '<>' | '>' | '<' | '<=' | '>=' ;
+   : '=' | '!=' | '<>' | '>' | '<' | '<=' | '>=' ;
 
 NUMBER
    : '-'?[0-9]+'%'
@@ -55,7 +61,7 @@ DATE
    : [0-9]+'.'[0-9]+'.'[0-9]+;
 
 BAREWORD
-   : [A-Za-z][@A-Za-z_0-9.%-]*
+   : [A-Za-z][@A-Za-z_0-9.%/-]*
    ;
 
 STRING

@@ -31,6 +31,7 @@ public class Global {
     }
 
     public static String i18n(String key) {
+        if(key == null) return null;
         String retval = GLOBAL_STRINGS.get(key.toLowerCase());
         if(retval == null) return key;
         if(retval.contains("$")) {
@@ -72,6 +73,10 @@ public class Global {
         if(value.NUMBER() != null)
             return value.NUMBER().getText();
         return null;
+    }
+
+    public static String key(StellarisParser.PairContext pair) {
+        return pair.BAREWORD().getText();
     }
 
     public static String variable(String key) {

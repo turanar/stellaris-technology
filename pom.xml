@@ -47,6 +47,26 @@
     <build>
         <plugins>
             <plugin>
+              <groupId>org.antlr</groupId>
+              <artifactId>antlr4-maven-plugin</artifactId>
+              <version>4.7.1</version>
+              <executions>
+                <execution>
+                  <goals>
+                    <goal>antlr4</goal>
+                  </goals>
+                  <configuration>
+                      <visitor>true</visitor>
+                      <arguments>
+                          <argument>-package</argument>
+                          <argument>net.turanar.stellaris.antlr</argument>
+                      </arguments>
+                  </configuration>
+                </execution>
+              </executions>
+            </plugin>
+            
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.0</version>
@@ -55,6 +75,27 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
-        </plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.1.4.RELEASE</version>
+                <configuration>
+                    <mainClass>${start-class}</mainClass>
+                </configuration>
+            </plugin>
+
+    </plugins>
+        
     </build>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.4.0</version>
+        <relativePath/>
+    </parent>
+
+    <properties>
+        <start-class>net.turanar.stellaris.App</start-class>
+    </properties>
 </project>

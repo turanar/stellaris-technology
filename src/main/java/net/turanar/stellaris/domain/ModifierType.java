@@ -31,6 +31,46 @@ public enum ModifierType {
     owns_any_bypass((p) -> f("Controls a system with a %s", i18n("bypass_" + gs(p).toLowerCase()))),
     has_seen_any_bypass((p) -> f("Has encountered a %s", i18n("bypass_" + gs(p).toLowerCase()))),
 
+    // FIXME: proper parsing of the following
+    count_archaeological_site((p)->{
+        String type = "";
+        String count = "";
+        for(PairContext prop : p.value().map().pair()) {
+            if(key(prop).equals("type")) {
+                type = i18n(gs(prop));
+            } else if (key(prop).equals("value")) {
+                count = op(prop) + " " + gs(prop);
+            }
+        }
+        return "Number of " + type + " is " + count;
+    }),
+    exists("Exists"),
+    federation("Is Federation"),
+    has_federation("Has %s federation"),
+    has_first_contact_dlc("Has DLC First Contact"),
+    has_nemesis("Has Nemesis"),
+    has_origin("Has %s federation"),
+    has_paragon_dlc("Has DLC galactic paragons"),
+    has_trait_in_council("Has trait %s in council"),
+    is_eager_explorer_empire("Is eager explorer empire"),
+    is_same_value("IS SAME VALUE"),
+    is_specialist_subject_type("Is specialist subject"),
+    mid_game_years_passed("In Mid-game"),
+    num_buildings("Has %s buildings"),
+    count_owned_pop("Owns %s pops"),
+    harvested_leviathan_dna("Has harvested leviathan DNA"),
+    has_lithoids("Has Lithoids"),
+    has_overlord_dlc("Has DLC Overlord"),
+    has_plantoids("Has Plantoids"),
+    has_relic("Has Relic"),
+    has_space_monster_dlc("Has DLC Space Monsters"),
+    is_catalytic_empire("Is Catalytic Empire"),
+    is_galactic_community_member("Is member of the galactic community"),
+    is_homicidal("Is homicidal"),
+    is_lithoid_empire("Is lithoid empire"),
+    // until here
+
+
     is_xenophile(DefaultParser.SCRIPTED),
     is_pacifist(DefaultParser.SCRIPTED),
     is_materialist(DefaultParser.SCRIPTED),
@@ -103,9 +143,9 @@ public enum ModifierType {
         String type = "";
         String count = "";
         for(PairContext prop : p.value().map().pair()) {
-            if(prop.key().equals("type")) {
+            if(key(prop).equals("type")) {
                 type = gs(prop);
-            } else if (prop.key().equals("amount")) {
+            } else if (key(prop).equals("amount")) {
                 count = op(prop) + " " + gs(prop);
             }
         }
@@ -116,9 +156,9 @@ public enum ModifierType {
         String retval = "Number of %s is %s %s";
         String size = null, operator = null, count = null;
         for(PairContext prop : p.value().map().pair()) {
-            if(prop.key().equals("starbase_size")) {
+            if(key(prop).equals("starbase_size")) {
                 size = i18n(gs(prop));
-            } else if (prop.key().equals("count")) {
+            } else if (key(prop).equals("count")) {
                 operator = op(prop);
                 count = gs(prop);
             }
@@ -130,9 +170,9 @@ public enum ModifierType {
         String type = "";
         String count = "";
         for(PairContext prop : p.value().map().pair()) {
-            if(prop.key().equals("type")) {
+            if(key(prop).equals("type")) {
                 type = i18n(gs(prop));
-            } else if (prop.key().equals("value")) {
+            } else if (key(prop).equals("value")) {
                 count = op(prop) + " " + gs(prop);
             }
         }
@@ -143,12 +183,12 @@ public enum ModifierType {
         String limits = "";
         String count = "";
         for(PairContext prop : p.value().map().pair()) {
-            if(prop.key().equals("limit")) {
+            if(key(prop).equals("limit")) {
                 for(PairContext l : prop.value().map().pair()) {
                     Modifier m = visitCondition(l);
                     limits += "\n" + LS + m.toString();
                 }
-            } else if(prop.key().equals("count")) {
+            } else if(key(prop).equals("count")) {
                 count = op(prop) + " " + gs(prop);
             }
         }
@@ -202,7 +242,7 @@ public enum ModifierType {
             return retval;
         }),
         SCRIPTED((format, p) -> {
-            PairContext q = GLOBAL_TRIGGERS.get(p.key());
+            PairContext q = GLOBAL_TRIGGERS.get(key(p));
             boolean value = gs(p).equals("yes");
             List<String> conditions = new ArrayList<>();
 
@@ -270,7 +310,7 @@ public enum ModifierType {
 
     public static Modifier visitCondition(PairContext pair) {
         Modifier retval = new Modifier();
-        retval.type = ModifierType.value(pair.key());
+        retval.type = ModifierType.value(key(pair));
         retval.pair = pair;
         return retval;
     }

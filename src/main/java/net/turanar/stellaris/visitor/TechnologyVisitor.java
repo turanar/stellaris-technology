@@ -20,16 +20,16 @@ public class TechnologyVisitor {
     private void visitFeatureUnlocks(Technology retval, StellarisParser.ValueContext val) {
         if(val.map() == null) return;
         for(StellarisParser.PairContext mod : val.map().pair()) {
-            if(mod.key().equals("BIOLOGICAL_species_trait_points_add")) continue;
-            if(mod.key().equals("show_only_custom_tooltip")) continue;
-            if(mod.key().equals("description") || mod.key().equals("custom_tooltip")) {
+            if(key(mod).equals("BIOLOGICAL_species_trait_points_add")) continue;
+            if(key(mod).equals("show_only_custom_tooltip")) continue;
+            if(key(mod).equals("description") || key(mod).equals("custom_tooltip")) {
                 String key = mod.value().BAREWORD().getText();
                 String effect = i18n(key);
                 if(key.equals(effect)) effect = i18n("mod_" + key.toLowerCase());
                 effect = effect.replace("$POINTS|0=+$","+1");
                 retval.feature_unlocks.add(effect);
-            } else if (!mod.key().startsWith("description")){
-                String key = mod.key().toLowerCase();
+            } else if (!key(mod).startsWith("description")){
+                String key = key(mod).toLowerCase();
 
                 if(key.equals("science_ship_survey_speed")) key = "mod_ship_science_survey_speed";
                 if(key.equals("ship_anomaly_generation_chance_mult")) key = "mod_ship_anomaly_generation_chance";
@@ -66,12 +66,12 @@ public class TechnologyVisitor {
     public Technology visitPair(StellarisParser.PairContext ctx) {
         Technology retval = new Technology();
 
-        retval.key = ctx.key();
+        retval.key = key(ctx);
         retval.name = i18n(retval.key);
         retval.description = i18n(retval.key + "_desc");
 
         for(StellarisParser.PairContext pair : ctx.value().map().pair()) {
-            switch (pair.key()) {
+            switch (key(pair)) {
                 case "cost":
                     retval.cost = Integer.valueOf(gs(pair)); break;
                 case "tier":

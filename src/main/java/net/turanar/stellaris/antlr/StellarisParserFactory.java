@@ -8,6 +8,7 @@ import java.nio.file.Path;
 public class StellarisParserFactory {
     public StellarisParser getParser(Path path) {
         StellarisParser retval = new StellarisParser(new StellarisTokenStream(path));
+        retval.addErrorListener(ThrowingErrorListener.INSTANCE);
         return retval;
     }
 }

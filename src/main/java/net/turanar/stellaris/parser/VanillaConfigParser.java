@@ -30,10 +30,15 @@ public class VanillaConfigParser extends AbstractConfigParser {
 
     public void parseTechnolgies(String folder) throws IOException {
         parse(folder + "/common/technology","txt", f -> {
-            factory.getParser(f).file().pair().forEach(p -> {
-                Technology t = techVisitor.visitPair(p);
-                technologies.put(t.key, t);
-            });
+            try {
+                factory.getParser(f).file().pair().forEach(p -> {
+                    Technology t = techVisitor.visitPair(p);
+                    technologies.put(t.key, t);
+                });
+            }
+            catch (RuntimeException e) {
+                throw new RuntimeException("Error parsing file " + f.toString(), e);
+            }
         });
     }
 
@@ -41,9 +46,14 @@ public class VanillaConfigParser extends AbstractConfigParser {
         Arrays.stream(GameObject.values()).forEach(type -> {
             try {
                 parse(folder + "/" + type.folder, "txt", path -> {
-                    if (path.getFileName().toString().startsWith("README")) return;
-                    if (!path.getFileName().toString().endsWith(type.filter)) return;
-                    unlockVisitor.visitFile(type, factory.getParser(path).file());
+                    try {
+                        if (path.getFileName().toString().contains("README")) return;
+                        if (!path.getFileName().toString().endsWith(type.filter)) return;
+                        unlockVisitor.visitFile(type, factory.getParser(path).file());
+                    }
+                    catch (RuntimeException e) {
+                        throw new RuntimeException("Error parsing file " + path.toString(), e);
+                    }
                 });
             } catch (IOException e) {e.printStackTrace();}
         });

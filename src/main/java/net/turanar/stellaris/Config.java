@@ -10,7 +10,9 @@ import org.springframework.context.annotation.Configuration;
 import org.yaml.snakeyaml.Yaml;
 
 import java.io.IOException;
+import java.lang.RuntimeException;
 import java.util.HashMap;
+import java.util.Collections;
 import java.util.Map;
 import static net.turanar.stellaris.Global.*;
 
@@ -24,11 +26,21 @@ public class Config {
         HashMap<String,String> retval = new HashMap<>();
 
         parse("files/common/scripted_variables", "txt", p -> {
-            factory.getParser(p).file().var().forEach(v -> retval.put(v.VARIABLE().getText(), v.NUMBER().getText()));
+            try {
+                factory.getParser(p).file().var().forEach(v -> retval.put(v.VARIABLE().getText(), v.NUMBER().getText()));
+            }
+            catch (RuntimeException e) {
+                throw new RuntimeException("Error parsing file " + p.toString(), e);
+            }
         });
 
         parse("files/common/technology", "txt", p -> {
-            factory.getParser(p).file().var().forEach(v -> retval.put(v.VARIABLE().getText(), v.NUMBER().getText()));
+            try {
+                factory.getParser(p).file().var().forEach(v -> retval.put(v.VARIABLE().getText(), v.NUMBER().getText()));
+            }
+            catch (RuntimeException e) {
+                throw new RuntimeException("Error parsing file " + p.toString(), e);
+            }
         });
 
         return retval;
@@ -39,12 +51,20 @@ public class Config {
         Map<String,String> retval = new HashMap<>();
 
         parse("files/localisation/english", "yml", path -> {
-            Yaml yaml = new Yaml();
-            Iterable<Object> data = yaml.loadAll(new StellarisYamlReader(path));
-            Map<String,Map<Object,Object>> map = (Map<String,Map<Object,Object>>)data.iterator().next();
-            map.get("l_english").forEach((k, v) -> {
-                retval.put(k.toString().toLowerCase(), v.toString());
-            });
+            try {
+                Yaml yaml = new Yaml();
+                Iterable<Object> data = yaml.loadAll(new StellarisYamlReader(path));
+                Map<String,Map<Object,Object>> map = (Map<String,Map<Object,Object>>)data.iterator().next();
+                Map english_l10n = map.getOrDefault("l_english", Collections.emptyMap());
+                if (english_l10n != null) {
+                    english_l10n.forEach((k, v) -> {
+                        retval.put(k.toString().toLowerCase(), v.toString());
+                    });
+                };
+            }
+            catch (RuntimeException e) {
+                throw new RuntimeException("Error parsing file " + path.toString(), e);
+            }
         });
 
         return retval;
@@ -55,7 +75,12 @@ public class Config {
         Map<String, StellarisParser.PairContext> retval = new HashMap<>();
 
         parse("files/common/scripted_triggers", "txt", path -> {
-            factory.getParser(path).file().pair().forEach(pair -> retval.put(pair.key(), pair));
+            try {
+                factory.getParser(path).file().pair().forEach(pair -> retval.put(key(pair), pair));
+            }
+            catch (RuntimeException e) {
+                throw new RuntimeException("Error parsing file " + path.toString(), e);
+            }
         });
 
         return retval;
